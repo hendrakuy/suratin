@@ -6,11 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
-    <title>Untuk Najwaa 💕</title>
+    <title>untuk Najwaa 🌸 (draft yang akhirnya kekirim)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@300;400;600;700&family=Dancing+Script:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,30 +20,24 @@
 
     <style>
       :root {
-        --pink-light: #ffe0ec;
-        --pink: #ff8fab;
-        --pink-deep: #ff4d8d;
-        --pink-dark: #d6336c;
-        --purple-light: #e8d5ff;
-        --purple: #c084fc;
-        --purple-deep: #9333ea;
-        --purple-dark: #6b21a8;
-        --rose-gold: #e8b4b8;
-        --champagne: #f7e7ce;
-        --white: #ffffff;
-        --soft-white: #fff5fb;
-        --text-dark: #2d0a3a;
-        --text-mid: #5b2a6e;
-        --glass: rgba(255, 255, 255, 0.12);
-        --glass-strong: rgba(255, 255, 255, 0.18);
-        --glass-border: rgba(255, 255, 255, 0.25);
-        --shadow-pink: 0 12px 40px rgba(255, 77, 141, 0.3);
-        --shadow-purple: 0 12px 40px rgba(147, 51, 234, 0.25);
-        --font-display: "Playfair Display", serif;
-        --font-elegant: "Cormorant Garamond", serif;
-        --font-body: "Nunito", sans-serif;
-        --font-script: "Dancing Script", cursive;
-        --safe-bottom: env(safe-area-inset-bottom, 16px);
+        --cream: #fff3e2;
+        --cream2: #ffe3c4;
+        --paper: #ffffff;
+        --ink: #22223b;
+        --ink-soft: #8d8aa6;
+        --coral: #ff6f5e;
+        --coral-deep: #e14a33;
+        --yellow: #ffcd3c;
+        --teal: #33c2a6;
+        --blue: #5aaeff;
+        --pink: #ff8fc8;
+        --shadow: 6px 6px 0 var(--ink);
+        --shadow-sm: 3px 3px 0 var(--ink);
+        --radius-card: 20px 20px 20px 6px;
+        --font-display: "Fredoka", sans-serif;
+        --font-body: "Plus Jakarta Sans", sans-serif;
+        --font-hand: "Caveat", cursive;
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
       }
 
       *,
@@ -55,2455 +49,1423 @@
         -webkit-tap-highlight-color: transparent;
       }
 
-      html {
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
+      html,
+      body {
+        height: 100%;
       }
 
       body {
         font-family: var(--font-body);
-        background: #0d0015;
-        color: var(--text-dark);
-        overflow-x: hidden;
-        cursor: none;
+        color: var(--ink);
+        background: var(--cream);
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
       }
 
-      @media (hover: none) and (pointer: coarse) {
-        body {
-          cursor: auto;
+      /* ==================== BACKGROUND DECOR ==================== */
+      .bg-decor {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      .bg-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.55;
+      }
+      .bg-blob.b1 {
+        width: 320px;
+        height: 320px;
+        background: var(--pink);
+        top: -100px;
+        left: -100px;
+      }
+      .bg-blob.b2 {
+        width: 360px;
+        height: 360px;
+        background: var(--teal);
+        bottom: -140px;
+        right: -120px;
+      }
+      .bg-blob.b3 {
+        width: 260px;
+        height: 260px;
+        background: var(--yellow);
+        bottom: 10%;
+        left: -100px;
+      }
+      .bg-sticker {
+        position: absolute;
+        font-size: 2.4rem;
+        opacity: 0.35;
+        animation: floaty 6s ease-in-out infinite;
+      }
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-6deg);
+        }
+        50% {
+          transform: translateY(-26px) rotate(8deg);
         }
       }
-
-      /* Custom Cursor */
-      .cursor-main {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: radial-gradient(circle, #ff4d8d, #ff8fab);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 99999;
-        transform: translate(-50%, -50%);
-        transition:
-          width 0.25s,
-          height 0.25s,
-          background 0.25s;
-        mix-blend-mode: screen;
-        filter: blur(0.5px);
-      }
-      .cursor-ring {
-        position: fixed;
-        width: 44px;
-        height: 44px;
-        border: 2.5px solid rgba(192, 132, 252, 0.7);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 99998;
-        transform: translate(-50%, -50%);
-        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.2);
-      }
-      .cursor-ring.hover {
-        width: 60px;
-        height: 60px;
-        border-color: rgba(255, 143, 171, 0.9);
-        background: rgba(255, 143, 171, 0.08);
-      }
-      @media (hover: none) and (pointer: coarse) {
-        .cursor-main,
-        .cursor-ring {
+      @media (max-width: 480px) {
+        .bg-decor {
           display: none;
         }
       }
 
-      /* Canvas Layers */
-      #particle-canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1;
-      }
-      #confetti-canvas {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 50;
-      }
-
-      /* Music Toggle */
-      .music-toggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 200;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background: var(--glass-strong);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1.5px solid var(--glass-border);
-        color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-      .music-toggle:hover {
-        transform: scale(1.1);
-        background: rgba(255, 255, 255, 0.22);
-      }
-      .music-toggle.playing {
-        animation: musicPulse 1.8s ease-in-out infinite;
-      }
-      @keyframes musicPulse {
-        0%,
-        100% {
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-        50% {
-          box-shadow: 0 4px 32px rgba(255, 143, 171, 0.6);
-        }
-      }
-
-      /* Page System */
-      .page {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        height: 100dvh;
+      /* ==================== PHONE FRAME ==================== */
+      .phone-frame {
+        width: min(420px, 94vw);
+        height: min(860px, 94vh);
+        background: var(--paper);
+        border: 4px solid var(--ink);
+        border-radius: 38px;
+        box-shadow: 10px 10px 0 var(--ink);
+        position: relative;
+        z-index: 10;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+      }
+      @media (max-width: 480px) {
+        .phone-frame {
+          width: 100vw;
+          height: 100dvh;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+
+      /* ==================== STATUS BAR ==================== */
+      .status-bar {
+        flex-shrink: 0;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 22px;
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 0.72rem;
+        background: var(--cream2);
+        border-bottom: 3px solid var(--ink);
+        letter-spacing: 0.02em;
+      }
+      .status-bar .icons {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        font-size: 0.78rem;
+      }
+
+      /* ==================== CHAT HEADER ==================== */
+      .chat-header {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-bottom: 3px solid var(--ink);
+        background: var(--paper);
+      }
+      .chat-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--yellow);
+        border: 2.5px solid var(--ink);
+        display: flex;
         align-items: center;
         justify-content: center;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 10;
-        overflow: hidden;
-        padding: 20px;
-        padding-bottom: calc(20px + var(--safe-bottom));
+        font-size: 1.3rem;
+        flex-shrink: 0;
       }
-      .page.active {
-        opacity: 1;
-        pointer-events: all;
+      .chat-name {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 1.05rem;
+        line-height: 1.2;
       }
-      .page.exit {
-        opacity: 0;
-        pointer-events: none;
+      .chat-status {
+        font-size: 0.72rem;
+        color: var(--ink-soft);
+        font-weight: 600;
+        transition: color 0.3s;
       }
-      .page.scrollable {
+      .chat-status.sent {
+        color: var(--teal);
+      }
+
+      /* ==================== CHAT BODY ==================== */
+      .chat-body {
+        flex: 1;
         overflow-y: auto;
-        justify-content: flex-start;
         -webkit-overflow-scrolling: touch;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-image: radial-gradient(
+          circle,
+          rgba(34, 34, 59, 0.05) 1px,
+          transparent 1px
+        );
+        background-size: 18px 18px;
+        scroll-behavior: smooth;
       }
 
-      /* Background Gradients */
-      .bg-splash {
-        background: radial-gradient(
-          ellipse at 30% 20%,
-          #4a1070 0%,
-          #1e0835 45%,
-          #0d0015 100%
-        );
+      .msg {
+        max-width: 80%;
+        padding: 10px 14px;
+        border-radius: 16px;
+        font-size: 0.92rem;
+        line-height: 1.5;
+        align-self: flex-end;
+        background: linear-gradient(135deg, var(--coral), var(--coral-deep));
+        color: #fff;
+        border-bottom-right-radius: 4px;
+        box-shadow: 0 2px 0 rgba(34, 34, 59, 0.15);
+        animation: popMsg 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        word-wrap: break-word;
       }
-      .bg-scene1 {
-        background: radial-gradient(
-          ellipse at 70% 80%,
-          rgba(255, 77, 141, 0.15) 0%,
-          #1e0835 50%,
-          #0d0015 100%
-        );
+      .msg.sticker-msg {
+        background: transparent;
+        box-shadow: none;
+        font-size: 2.3rem;
+        padding: 0 2px;
+        line-height: 1;
       }
-      .bg-scene2 {
-        background: radial-gradient(
-          ellipse at 20% 60%,
-          rgba(192, 132, 252, 0.18) 0%,
-          #0d0015 60%
-        );
-      }
-      .bg-scene3 {
-        background: radial-gradient(
-          ellipse at 60% 30%,
-          rgba(255, 143, 171, 0.15) 0%,
-          #0d0015 60%
-        );
-      }
-      .bg-final {
-        background: radial-gradient(
-          ellipse at 50% 50%,
-          #5b1a8a 0%,
-          #2d0a4a 50%,
-          #0d0015 100%
-        );
+      @keyframes popMsg {
+        from {
+          opacity: 0;
+          transform: translateY(8px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
       }
 
-      /* Glass Card */
-      .glass-card {
-        background: var(--glass);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        border: 1.5px solid var(--glass-border);
-        border-radius: 32px;
-        box-shadow:
-          var(--shadow-pink),
-          0 2px 12px rgba(0, 0, 0, 0.4);
-        padding: clamp(24px, 5vw, 40px) clamp(20px, 5vw, 36px);
-        max-width: 460px;
-        width: 92%;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.3s ease;
+      .typing-indicator {
+        align-self: flex-end;
+        background: rgba(255, 255, 255, 0.7);
+        border: 2.5px dashed var(--ink);
+        border-radius: 16px;
+        padding: 11px 16px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        animation: popMsg 0.3s ease;
       }
-      .glass-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
+      .typing-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--ink);
+        animation: typingBounce 1s infinite;
+      }
+      .typing-dot:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .typing-dot:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      @keyframes typingBounce {
+        0%,
+        60%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.4;
+        }
+        30% {
+          transform: translateY(-5px);
+          opacity: 1;
+        }
+      }
+
+      /* ==================== APP CARDS (quiz / slot / game / letter / finale) ==================== */
+      .app-card {
+        align-self: stretch;
+        background: var(--paper);
+        border: 3px solid var(--ink);
+        border-radius: var(--radius-card);
+        box-shadow: var(--shadow);
+        padding: 16px;
+        animation: popMsg 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .app-card-title {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 1.02rem;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .app-card-sub {
+        font-size: 0.8rem;
+        color: var(--ink-soft);
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+
+      /* Quiz */
+      .quiz-opt {
+        display: block;
         width: 100%;
-        height: 45%;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          transparent 100%
-        );
-        border-radius: 32px 32px 0 0;
-        pointer-events: none;
+        text-align: left;
+        padding: 10px 14px;
+        margin-bottom: 8px;
+        border: 2.5px solid var(--ink);
+        border-radius: 14px;
+        background: var(--cream);
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s,
+          background 0.15s,
+          opacity 0.15s;
+        color: var(--ink);
+      }
+      .quiz-opt:last-child {
+        margin-bottom: 0;
+      }
+      .quiz-opt:hover:not(:disabled) {
+        transform: translate(-2px, -2px);
+        box-shadow: 3px 3px 0 var(--ink);
+      }
+      .quiz-opt.selected {
+        background: var(--yellow);
+        transform: translate(-2px, -2px);
+        box-shadow: 3px 3px 0 var(--ink);
+      }
+      .quiz-opt:disabled:not(.selected) {
+        opacity: 0.45;
+      }
+      .quiz-opt:disabled {
+        cursor: default;
+      }
+
+      /* Slot machine */
+      .slot-row {
+        display: flex;
+        gap: 8px;
+        margin: 10px 0 14px;
+      }
+      .slot-reel {
+        flex: 1;
+        min-height: 58px;
+        background: var(--ink);
+        color: var(--yellow);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 0.74rem;
+        text-align: center;
+        padding: 6px;
+        line-height: 1.2;
+        border: 2.5px solid var(--ink);
+      }
+      .slot-result {
+        margin-top: 4px;
+        padding: 12px;
+        background: var(--cream2);
+        border: 2.5px dashed var(--coral-deep);
+        border-radius: 14px;
+        font-family: var(--font-hand);
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: 700;
+        color: var(--coral-deep);
+        min-height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slot-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .slot-actions .btn-fun {
+        flex: 1;
       }
 
       /* Buttons */
-      .btn-main {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: clamp(14px, 3vw, 18px) clamp(32px, 7vw, 48px);
-        border: none;
-        border-radius: 999px;
-        font-family: var(--font-body);
+      .btn-fun {
+        font-family: var(--font-display);
         font-weight: 700;
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-size: 0.88rem;
+        padding: 11px 18px;
+        border-radius: 14px;
+        border: 3px solid var(--ink);
+        background: var(--yellow);
+        box-shadow: var(--shadow-sm);
         cursor: pointer;
-        background: linear-gradient(
-          135deg,
-          var(--pink-deep),
-          var(--purple-deep)
-        );
-        color: white;
-        box-shadow:
-          0 6px 28px rgba(255, 77, 141, 0.5),
-          0 2px 6px rgba(0, 0, 0, 0.25);
-        transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-        position: relative;
-        overflow: hidden;
-        letter-spacing: 0.03em;
-        -webkit-user-select: none;
-        user-select: none;
-        white-space: nowrap;
+        transition: transform 0.12s, box-shadow 0.12s;
+        color: var(--ink);
+        text-align: center;
       }
-      .btn-main::after {
-        content: "";
+      .btn-fun:active {
+        transform: translate(3px, 3px);
+        box-shadow: 0 0 0 var(--ink);
+      }
+      .btn-fun.coral {
+        background: var(--coral);
+        color: #fff;
+      }
+      .btn-fun.teal {
+        background: var(--teal);
+        color: #fff;
+      }
+      .btn-fun.full {
+        display: block;
+        width: 100%;
+      }
+      .btn-fun[hidden] {
+        display: none;
+      }
+      .btn-fun + .btn-fun {
+        margin-top: 10px;
+      }
+
+      /* Game */
+      .game-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.2) 0%,
-          transparent 50%
-        );
-        border-radius: inherit;
-        pointer-events: none;
+        z-index: 80;
+        background: linear-gradient(165deg, var(--blue), var(--teal));
+        display: none;
+        flex-direction: column;
+        padding: 18px;
+        color: #fff;
       }
-      .btn-main:active {
-        transform: scale(0.94);
-        box-shadow: 0 3px 14px rgba(255, 77, 141, 0.4);
+      .game-overlay.active {
+        display: flex;
       }
-      @media (hover: hover) {
-        .btn-main:hover {
-          transform: scale(1.06) translateY(-3px);
-          box-shadow:
-            0 10px 40px rgba(255, 77, 141, 0.6),
-            0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-      }
-
-      .btn-ghost {
-        display: inline-flex;
+      .game-top {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 12px 28px;
-        border: 1.5px solid var(--glass-border);
-        border-radius: 999px;
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.9rem;
-        cursor: pointer;
-        background: rgba(255, 255, 255, 0.06);
-        color: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-        -webkit-user-select: none;
-        user-select: none;
-      }
-      @media (hover: hover) {
-        .btn-ghost:hover {
-          background: rgba(255, 255, 255, 0.16);
-          transform: scale(1.05);
-          border-color: rgba(255, 143, 171, 0.5);
-        }
-      }
-
-      /* Typography */
-      .title-display {
         font-family: var(--font-display);
-        font-size: clamp(2rem, 6vw, 4.5rem);
         font-weight: 700;
-        line-height: 1.15;
-        color: var(--white);
-        text-shadow: 0 2px 24px rgba(255, 77, 141, 0.5);
-      }
-      .title-script {
-        font-family: var(--font-script);
-        font-size: clamp(1.4rem, 4.5vw, 2.8rem);
-        color: var(--pink-light);
-        text-shadow: 0 2px 14px rgba(255, 143, 171, 0.5);
-        line-height: 1.3;
-      }
-      .subtitle {
-        font-family: var(--font-body);
-        font-size: clamp(0.85rem, 2.8vw, 1.05rem);
-        color: rgba(255, 255, 255, 0.65);
-        line-height: 1.6;
-      }
-      .body-text {
-        font-size: clamp(0.95rem, 3vw, 1.15rem);
-        color: rgba(255, 255, 255, 0.85);
-        line-height: 1.85;
-        font-family: var(--font-body);
-      }
-
-      /* Navigation Dots */
-      .nav-dots {
-        position: fixed;
-        right: 14px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        z-index: 100;
-      }
-      .nav-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-        cursor: pointer;
-        border: 1.5px solid transparent;
-      }
-      .nav-dot.active {
-        background: var(--pink-deep);
-        height: 26px;
-        border-radius: 5px;
-        box-shadow: 0 0 14px rgba(255, 77, 141, 0.7);
-        border-color: rgba(255, 255, 255, 0.4);
-      }
-      @media (hover: hover) {
-        .nav-dot:hover {
-          background: rgba(255, 255, 255, 0.45);
-          transform: scale(1.4);
-        }
-      }
-
-      /* Splash Screen */
-      .splash-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: clamp(16px, 3vh, 28px);
-        padding: 20px;
-      }
-      .splash-emoji-ring {
-        position: relative;
-        width: clamp(100px, 25vw, 150px);
-        height: clamp(100px, 25vw, 150px);
-        margin: 0 auto;
-        flex-shrink: 0;
-      }
-      .splash-center-heart {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: clamp(2.5rem, 8vw, 4.5rem);
-        animation: heartBeat 1.2s ease-in-out infinite;
-        filter: drop-shadow(0 0 24px rgba(255, 77, 141, 0.8));
-      }
-      .orbit-emoji {
-        position: absolute;
-        font-size: clamp(1rem, 3vw, 1.6rem);
-        animation: orbit 6.5s linear infinite;
-        top: 50%;
-        left: 50%;
-      }
-      .orbit-emoji:nth-child(2) {
-        animation-delay: -2.15s;
-      }
-      .orbit-emoji:nth-child(3) {
-        animation-delay: -4.3s;
-      }
-
-      @keyframes orbit {
-        0% {
-          transform: rotate(0deg) translateX(clamp(48px, 12vw, 65px))
-            rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg) translateX(clamp(48px, 12vw, 65px))
-            rotate(-360deg);
-        }
-      }
-      @keyframes heartBeat {
-        0%,
-        100% {
-          transform: translate(-50%, -50%) scale(1);
-        }
-        12% {
-          transform: translate(-50%, -50%) scale(1.22);
-        }
-        24% {
-          transform: translate(-50%, -50%) scale(1);
-        }
-        36% {
-          transform: translate(-50%, -50%) scale(1.16);
-        }
-        60% {
-          transform: translate(-50%, -50%) scale(1);
-        }
-      }
-
-      .splash-title {
-        font-family: var(--font-display);
-        font-size: clamp(2.8rem, 11vw, 6rem);
-        font-weight: 700;
-        background: linear-gradient(135deg, #ffe0ec, #ff8fab, #c084fc, #ffe0ec);
-        background-size: 300% 300%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.05;
-        animation: shimmerGradient 4s ease-in-out infinite;
-      }
-      @keyframes shimmerGradient {
-        0%,
-        100% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-      }
-      .splash-tagline {
-        font-size: clamp(0.8rem, 2.5vw, 0.95rem);
-        color: rgba(255, 255, 255, 0.45);
-        font-style: italic;
-        letter-spacing: 0.06em;
-      }
-      .scroll-hint {
-        font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.3);
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        animation: gentlePulse 2.5s ease-in-out infinite;
-      }
-      @keyframes gentlePulse {
-        0%,
-        100% {
-          opacity: 0.3;
-        }
-        50% {
-          opacity: 0.75;
-        }
-      }
-
-      /* Floating BG Hearts */
-      .bg-hearts-container {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        overflow: hidden;
-      }
-      .bg-floating-heart {
-        position: absolute;
-        font-size: clamp(1rem, 3vw, 1.6rem);
-        opacity: 0.1;
-        animation: floatUpHeart linear infinite;
-      }
-      @keyframes floatUpHeart {
-        0% {
-          transform: translateY(115vh) rotate(0deg) scale(0.8);
-          opacity: 0.06;
-        }
-        60% {
-          opacity: 0.18;
-        }
-        100% {
-          transform: translateY(-20vh) rotate(360deg) scale(1.1);
-          opacity: 0;
-        }
-      }
-
-      /* Scene 1 - Quiz */
-      .scene1-content {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: clamp(16px, 3vh, 24px);
-        padding: 20px;
-        width: 100%;
-        max-width: 440px;
-      }
-      .question-text {
-        font-family: var(--font-display);
-        font-size: clamp(1.4rem, 5vw, 2.4rem);
-        color: white;
-        font-style: italic;
-        opacity: 0;
-        animation: fadeSlideUp 0.7s 0.25s forwards;
-      }
-      .answer-options {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-        opacity: 0;
-        animation: fadeSlideUp 0.7s 0.5s forwards;
-      }
-      .answer-btn {
-        width: 100%;
-        padding: clamp(14px, 3vw, 18px) clamp(16px, 4vw, 24px);
-        border: 1.5px solid rgba(255, 255, 255, 0.18);
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.06);
-        color: rgba(255, 255, 255, 0.9);
-        font-family: var(--font-body);
-        font-size: clamp(0.9rem, 3vw, 1.05rem);
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        text-align: left;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        position: relative;
-        overflow: hidden;
-      }
-      @media (hover: hover) {
-        .answer-btn:hover {
-          background: rgba(255, 143, 171, 0.22);
-          border-color: var(--pink);
-          transform: translateX(8px) scale(1.03);
-          box-shadow: 0 4px 20px rgba(255, 143, 171, 0.2);
-        }
-      }
-      .answer-btn.wrong {
-        animation: shakeBtn 0.55s ease;
-        border-color: rgba(255, 90, 90, 0.6);
-        background: rgba(255, 90, 90, 0.15);
-      }
-      .answer-btn.correct {
-        background: rgba(255, 77, 141, 0.35);
-        border-color: var(--pink-deep);
-        transform: scale(1.06);
-        box-shadow: 0 6px 28px rgba(255, 77, 141, 0.4);
-      }
-      @keyframes shakeBtn {
-        0%,
-        100% {
-          transform: translateX(0);
-        }
-        20% {
-          transform: translateX(-10px);
-        }
-        40% {
-          transform: translateX(10px);
-        }
-        60% {
-          transform: translateX(-7px);
-        }
-        80% {
-          transform: translateX(7px);
-        }
-      }
-      @keyframes fadeSlideUp {
-        from {
-          opacity: 0;
-          transform: translateY(28px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Scene 2 - Reasons */
-      .reason-card-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: clamp(14px, 3vh, 22px);
-        padding: 20px;
-        width: 100%;
-        max-width: 420px;
-      }
-      .reason-counter {
-        font-family: var(--font-script);
-        font-size: clamp(1rem, 3vw, 1.2rem);
-        color: var(--pink-light);
-        opacity: 0.8;
-      }
-      .progress-dots {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .dot-indicator {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-      .dot-indicator.active {
-        background: var(--pink-deep);
-        transform: scale(1.5);
-        box-shadow: 0 0 12px rgba(255, 77, 141, 0.7);
-      }
-      .dot-indicator.done {
-        background: var(--purple);
-        box-shadow: 0 0 8px rgba(147, 51, 234, 0.5);
-      }
-      .reason-big-number {
-        font-family: var(--font-display);
-        font-size: clamp(3.5rem, 14vw, 9rem);
-        font-weight: 700;
-        background: linear-gradient(135deg, var(--pink-deep), var(--purple));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1;
-        filter: drop-shadow(0 0 35px rgba(255, 77, 141, 0.5));
-        transition: all 0.3s ease;
-      }
-      .reason-emoji-display {
-        font-size: clamp(2.5rem, 8vw, 4rem);
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-      .reason-text-display {
-        font-family: var(--font-elegant);
-        font-size: clamp(1.05rem, 3.5vw, 1.5rem);
-        color: white;
-        text-align: center;
-        font-style: italic;
-        line-height: 1.6;
-        max-width: 340px;
-        min-height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.35s ease;
-      }
-
-      /* Scene 3 - Game */
-      .game-header {
-        text-align: center;
-        color: white;
-        padding: 0 16px;
-      }
-      .game-title {
-        font-family: var(--font-display);
-        font-size: clamp(1.3rem, 4.5vw, 2rem);
-        font-style: italic;
-        margin-bottom: 4px;
-      }
-      .game-subtitle {
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.55);
-      }
-      .game-score-bar {
-        display: flex;
-        justify-content: center;
-        gap: clamp(20px, 5vw, 40px);
-        padding: 8px 16px;
-        flex-wrap: wrap;
-      }
-      .score-item {
-        text-align: center;
-      }
-      .score-label {
-        font-size: 0.72rem;
-        color: rgba(255, 255, 255, 0.45);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-      }
-      .score-value {
-        font-family: var(--font-display);
-        font-size: clamp(1.6rem, 5vw, 2.2rem);
-        font-weight: 700;
-        color: var(--pink-light);
+        font-size: 0.95rem;
+        margin-bottom: 12px;
       }
       .game-area {
+        flex: 1;
         position: relative;
-        width: min(92vw, 400px);
-        height: min(50vh, 360px);
-        height: min(50dvh, 360px);
-        border-radius: 28px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1.5px solid rgba(255, 255, 255, 0.1);
         overflow: hidden;
-        cursor: pointer;
-        flex-shrink: 0;
-        touch-action: manipulation;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 3px solid rgba(255, 255, 255, 0.45);
       }
-      .game-heart {
+      .game-sticker {
         position: absolute;
-        font-size: clamp(1.6rem, 5vw, 2.4rem);
+        top: -44px;
+        font-size: 2.1rem;
         cursor: pointer;
-        transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1);
         user-select: none;
-        -webkit-user-select: none;
-        animation: floatGameHeart 2.2s ease-in-out infinite;
-        z-index: 2;
-        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
-        touch-action: manipulation;
+        animation: fallDown linear forwards;
+        filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.15));
       }
-      .game-heart:active {
-        transform: scale(1.4);
-      }
-      .game-heart.bad {
-        filter: grayscale(0.6) brightness(0.6)
-          drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
-      }
-      @keyframes floatGameHeart {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-8px);
+      @keyframes fallDown {
+        to {
+          top: 102%;
         }
       }
-      .game-instruction-overlay {
+      .score-pop {
         position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 12px;
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 0.9rem;
-        text-align: center;
-        padding: 20px;
-        pointer-events: none;
-        z-index: 3;
-      }
-      .game-complete-msg {
-        text-align: center;
-        padding: 0 16px;
-        color: var(--pink-light);
-        font-family: var(--font-script);
-        font-size: clamp(1rem, 3.5vw, 1.3rem);
-        min-height: 36px;
-        transition: all 0.3s;
-      }
-      #scene3 {
-        gap: clamp(10px, 2vh, 18px);
-      }
-
-      /* Scene 4 - Letter */
-      .letter-wrapper {
-        padding: 20px;
-        padding-bottom: calc(20px + var(--safe-bottom));
-        width: 100%;
-        max-width: 500px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-      .letter-paper {
-        background: linear-gradient(
-          160deg,
-          rgba(255, 255, 255, 0.15) 0%,
-          rgba(255, 214, 231, 0.1) 100%
-        );
-        backdrop-filter: blur(28px);
-        -webkit-backdrop-filter: blur(28px);
-        border: 1.5px solid rgba(255, 255, 255, 0.28);
-        border-radius: 28px;
-        padding: clamp(24px, 5vw, 38px) clamp(20px, 5vw, 32px);
-        width: 100%;
-        box-shadow:
-          0 16px 56px rgba(255, 77, 141, 0.2),
-          0 4px 12px rgba(0, 0, 0, 0.3);
-        position: relative;
-        overflow: hidden;
-      }
-      .letter-paper::before {
-        content: "💌";
-        position: absolute;
-        top: -30px;
-        right: -30px;
-        font-size: 8rem;
-        opacity: 0.05;
-        transform: rotate(18deg);
-        pointer-events: none;
-      }
-      .letter-greeting {
-        font-family: var(--font-script);
-        font-size: clamp(1.4rem, 4.5vw, 2.2rem);
-        color: var(--pink-light);
-        margin-bottom: 16px;
-        display: block;
-      }
-      .letter-body {
-        font-family: var(--font-body);
-        font-size: clamp(0.9rem, 2.8vw, 1.08rem);
-        color: rgba(255, 255, 255, 0.88);
-        line-height: 1.9;
-      }
-      .letter-body p {
-        margin-bottom: 14px;
-      }
-      .letter-highlight {
-        color: var(--pink);
-        font-weight: 700;
-      }
-      .letter-sign {
-        font-family: var(--font-script);
-        font-size: clamp(1.1rem, 3.5vw, 1.7rem);
-        color: var(--purple-light);
-        text-align: right;
-        margin-top: 20px;
-        display: block;
-      }
-
-      /* Scene 5 - Finale */
-      .finale-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: clamp(18px, 3.5vh, 28px);
-        padding: 20px;
-      }
-      .finale-ring {
-        position: relative;
-        width: clamp(150px, 35vw, 220px);
-        height: clamp(150px, 35vw, 220px);
-        flex-shrink: 0;
-      }
-      .finale-center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: clamp(4rem, 12vw, 7rem);
-        animation: heartBeat 1.2s ease-in-out infinite;
-        filter: drop-shadow(0 0 35px rgba(255, 77, 141, 0.9));
-      }
-      .orbit-star {
-        position: absolute;
-        font-size: clamp(1.2rem, 3.5vw, 1.8rem);
-        animation: orbit2 5.5s linear infinite;
-        top: 50%;
-        left: 50%;
-      }
-      .orbit-star:nth-child(2) {
-        animation-delay: -1.35s;
-      }
-      .orbit-star:nth-child(3) {
-        animation-delay: -2.7s;
-      }
-      .orbit-star:nth-child(4) {
-        animation-delay: -4.05s;
-      }
-      @keyframes orbit2 {
-        0% {
-          transform: rotate(0deg) translateX(clamp(65px, 16vw, 95px))
-            rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg) translateX(clamp(65px, 16vw, 95px))
-            rotate(-360deg);
-        }
-      }
-      .finale-title {
         font-family: var(--font-display);
-        font-size: clamp(1.6rem, 6vw, 3.2rem);
         font-weight: 700;
-        font-style: italic;
-        background: linear-gradient(135deg, #ffe0ec, #ff8fab, #c084fc, #ffe0ec);
-        background-size: 300% 300%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmerGradient 4s ease infinite;
-      }
-      .finale-subtitle {
-        font-family: var(--font-elegant);
-        font-size: clamp(1rem, 3.5vw, 1.5rem);
-        color: var(--purple-light);
-        line-height: 1.6;
-      }
-      .share-buttons {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .share-btn {
-        padding: 12px 24px;
-        border-radius: 999px;
-        border: 1.5px solid rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.06);
-        color: white;
-        font-family: var(--font-body);
-        font-size: 0.9rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        white-space: nowrap;
-      }
-      @media (hover: hover) {
-        .share-btn:hover {
-          transform: scale(1.08);
-          background: rgba(255, 255, 255, 0.16);
-          border-color: rgba(255, 143, 171, 0.4);
-        }
-      }
-
-      /* Easter Egg */
-      .easter-egg-btn {
-        position: fixed;
-        bottom: clamp(16px, 4vh, 28px);
-        right: clamp(16px, 4vw, 28px);
-        font-size: clamp(1.4rem, 4vw, 2rem);
-        cursor: pointer;
-        z-index: 100;
-        opacity: 0.4;
-        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        filter: grayscale(0.2);
-        animation: gentleBob 3.5s ease-in-out infinite;
-        background: none;
-        border: none;
-        -webkit-tap-highlight-color: transparent;
-      }
-      @media (hover: hover) {
-        .easter-egg-btn:hover {
-          opacity: 1;
-          transform: scale(1.5) rotate(12deg);
-          filter: grayscale(0);
-        }
-      }
-      @keyframes gentleBob {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-7px);
-        }
-      }
-      .egg-modal {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        background: rgba(8, 0, 18, 0.88);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        opacity: 0;
+        font-size: 1.1rem;
+        color: #fff;
         pointer-events: none;
-        transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: popUp 0.6s ease forwards;
       }
-      .egg-modal.visible {
-        opacity: 1;
-        pointer-events: all;
-      }
-      .egg-content {
-        background: linear-gradient(
-          135deg,
-          rgba(255, 214, 231, 0.2),
-          rgba(192, 132, 252, 0.15)
-        );
-        border: 1.5px solid rgba(255, 255, 255, 0.22);
-        border-radius: 28px;
-        padding: clamp(28px, 5vw, 40px) clamp(22px, 5vw, 32px);
-        max-width: 360px;
-        width: 92%;
-        text-align: center;
-        color: white;
-        box-shadow: 0 20px 72px rgba(255, 77, 141, 0.4);
-      }
-      .close-egg-btn {
-        padding: 10px 28px;
-        border-radius: 999px;
-        border: 1.5px solid rgba(255, 255, 255, 0.3);
-        background: rgba(255, 255, 255, 0.08);
-        color: white;
-        cursor: pointer;
-        font-family: var(--font-body);
-        font-weight: 600;
-        transition: all 0.25s;
-      }
-      @media (hover: hover) {
-        .close-egg-btn:hover {
-          background: rgba(255, 255, 255, 0.2);
-          transform: scale(1.05);
-        }
-      }
-
-      /* Toast */
-      .toast-notification {
-        position: fixed;
-        bottom: clamp(24px, 5vh, 40px);
-        left: 50%;
-        transform: translateX(-50%) translateY(100px);
-        background: rgba(255, 77, 141, 0.92);
-        color: white;
-        padding: 12px 26px;
-        border-radius: 999px;
-        font-family: var(--font-body);
-        font-size: 0.88rem;
-        font-weight: 600;
-        z-index: 9000;
-        transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        box-shadow: 0 6px 28px rgba(255, 77, 141, 0.5);
-        white-space: nowrap;
-        pointer-events: none;
-      }
-      .toast-notification.show {
-        transform: translateX(-50%) translateY(0);
-      }
-
-      /* Typewriter */
-      .typewriter-cursor {
-        display: inline-block;
-        width: 2.5px;
-        height: 1.1em;
-        background: var(--pink);
-        margin-left: 3px;
-        vertical-align: text-bottom;
-        animation: cursorBlink 0.9s step-end infinite;
-        border-radius: 1px;
-      }
-      @keyframes cursorBlink {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-      }
-
-      /* Heart Burst */
-      @keyframes burstAway {
-        0% {
-          transform: translate(-50%, -50%) scale(0);
-          opacity: 1;
-        }
-        60% {
-          opacity: 0.9;
-        }
-        100% {
-          transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy)))
-            scale(1.3);
-          opacity: 0;
-        }
-      }
-
-      /* Pop In Animation (for reason emoji) */
-      @keyframes popIn {
+      @keyframes popUp {
         from {
-          transform: scale(0) rotate(-15deg);
-          opacity: 0;
+          opacity: 1;
+          transform: translateY(0) scale(1);
         }
         to {
-          transform: scale(1) rotate(0deg);
-          opacity: 1;
+          opacity: 0;
+          transform: translateY(-40px) scale(1.3);
+        }
+      }
+      .game-center-msg {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 14px;
+        padding: 24px;
+      }
+      .game-center-msg .big {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 2.6rem;
+      }
+      .game-center-msg p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 280px;
+      }
+      .game-result-panel {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 14px;
+        padding: 24px;
+        background: rgba(34, 34, 59, 0.35);
+        backdrop-filter: blur(2px);
+      }
+      .game-result-panel.show {
+        display: flex;
+      }
+      .game-result-panel .score-num {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 3rem;
+      }
+      .game-result-panel p {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        max-width: 280px;
+      }
+
+      /* Letter */
+      .letter-text p {
+        font-size: 0.88rem;
+        line-height: 1.7;
+        margin-bottom: 10px;
+        color: var(--ink);
+      }
+      .letter-text p:last-child {
+        margin-bottom: 0;
+      }
+      .letter-text .sign {
+        font-family: var(--font-hand);
+        font-size: 1.15rem;
+        color: var(--coral-deep);
+        font-weight: 700;
+        text-align: right;
+        display: block;
+        margin-top: 12px;
+      }
+
+      /* Finale */
+      .sticker-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin: 12px 0 14px;
+      }
+      .sticker-cell {
+        aspect-ratio: 1;
+        background: var(--cream);
+        border: 2.5px solid var(--ink);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 4px;
+      }
+      .sticker-cell.small-text {
+        font-size: 0.62rem;
+        font-weight: 700;
+        font-family: var(--font-display);
+        line-height: 1.2;
+      }
+      .finale-actions {
+        display: flex;
+        gap: 8px;
+      }
+      .finale-actions .btn-fun {
+        flex: 1;
+      }
+      .finale-note {
+        margin-top: 12px;
+        font-family: var(--font-hand);
+        font-size: 1.1rem;
+        text-align: center;
+        color: var(--ink-soft);
+        line-height: 1.5;
+      }
+
+      /* Confetti pieces (finale celebration) */
+      .confetti-piece {
+        position: absolute;
+        top: -30px;
+        font-size: 1.5rem;
+        pointer-events: none;
+        z-index: 95;
+        animation: confettiFall 2.6s ease-in forwards;
+      }
+      @keyframes confettiFall {
+        to {
+          transform: translateY(620px) rotate(360deg);
+          opacity: 0;
         }
       }
 
-      /* Responsive */
-      @media (max-width: 380px) {
-        .nav-dots {
-          right: 8px;
-          gap: 10px;
+      /* ==================== LOCKSCREEN ==================== */
+      .lockscreen {
+        position: absolute;
+        inset: 0;
+        z-index: 50;
+        background: linear-gradient(165deg, var(--coral) 0%, var(--pink) 55%, var(--yellow) 100%);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 54px 22px calc(28px + var(--safe-bottom));
+        text-align: center;
+        transition:
+          transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.55s ease;
+        cursor: pointer;
+      }
+      .lockscreen.unlocked {
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+      }
+      .lock-time {
+        font-family: var(--font-display);
+        font-size: clamp(2.6rem, 13vw, 3.4rem);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .lock-date {
+        font-size: 0.88rem;
+        opacity: 0.92;
+        margin-top: 6px;
+        font-weight: 600;
+      }
+      .lock-mid {
+        font-family: var(--font-hand);
+        font-size: 1.3rem;
+        line-height: 1.5;
+        max-width: 280px;
+      }
+      .lock-notif {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.55);
+        border-radius: 16px;
+        padding: 14px 16px;
+        backdrop-filter: blur(6px);
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .lock-notif .icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--ink);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+      .lock-notif .body {
+        flex: 1;
+      }
+      .lock-notif .title {
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-bottom: 2px;
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+      }
+      .lock-notif .preview {
+        font-size: 0.8rem;
+        opacity: 0.95;
+        line-height: 1.4;
+      }
+      .lock-hint {
+        font-family: var(--font-hand);
+        font-size: 1.1rem;
+        margin-top: 16px;
+        animation: bounceHint 1.6s infinite;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: center;
+      }
+      @keyframes bounceHint {
+        0%,
+        100% {
+          transform: translateY(0);
         }
-        .nav-dot {
-          width: 6px;
-          height: 6px;
-        }
-        .nav-dot.active {
-          height: 20px;
-        }
-        .music-toggle {
-          top: 12px;
-          right: 12px;
-          width: 38px;
-          height: 38px;
-          font-size: 1rem;
-        }
-        .easter-egg-btn {
-          bottom: 12px;
-          right: 12px;
+        50% {
+          transform: translateY(-6px);
         }
       }
-      @media (min-width: 768px) {
-        .page {
-          padding: 32px;
-        }
-        .game-area {
-          width: 480px;
-          height: 420px;
-        }
-        .nav-dots {
-          right: 20px;
-          gap: 14px;
-        }
+
+      /* ==================== INPUT BAR ==================== */
+      .chat-input-bar {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px calc(10px + var(--safe-bottom));
+        border-top: 3px solid var(--ink);
+        background: var(--cream2);
       }
-      @media (min-width: 1024px) {
-        .glass-card {
-          max-width: 520px;
-        }
-        .letter-wrapper {
-          max-width: 560px;
-        }
+      .fake-input {
+        flex: 1;
+        background: var(--paper);
+        border: 2.5px solid var(--ink);
+        border-radius: 22px;
+        padding: 9px 16px;
+        font-size: 0.84rem;
+        color: var(--ink-soft);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: opacity 0.35s;
       }
-      @media (max-height: 650px) {
-        .splash-emoji-ring {
-          width: 85px;
-          height: 85px;
-        }
-        .splash-center-heart {
-          font-size: 2.4rem;
-        }
-        .reason-big-number {
-          font-size: clamp(2.8rem, 10vw, 5rem);
-        }
+      .fake-input.fade {
+        opacity: 0;
+      }
+      .send-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--coral);
+        border: 2.5px solid var(--ink);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        font-size: 0.95rem;
+        transition: transform 0.12s;
+      }
+      .send-btn:active {
+        transform: scale(0.9);
+      }
+
+      /* ==================== TOAST ==================== */
+      .toast {
+        position: absolute;
+        bottom: 78px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        opacity: 0;
+        background: var(--ink);
+        color: #fff;
+        padding: 9px 18px;
+        border-radius: 22px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        pointer-events: none;
+        z-index: 200;
+        white-space: nowrap;
+        max-width: 90%;
+        text-align: center;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
       }
     </style>
   </head>
 
   <body>
-    <!-- Canvas -->
-    <canvas id="particle-canvas"></canvas>
-    <canvas id="confetti-canvas"></canvas>
-
-    <!-- Custom Cursor -->
-    <div class="cursor-main" id="cursorMain"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
-    <!-- Music Toggle -->
-    <button
-      class="music-toggle"
-      id="musicToggle"
-      aria-label="Toggle Music"
-      title="Musik Romantis 🎵"
-    >
-      <i class="fa-solid fa-music"></i>
-    </button>
-
-    <!-- Navigation Dots -->
-    <div class="nav-dots" id="navDots">
-      <div class="nav-dot active" data-scene="0" title="Pembuka"></div>
-      <div class="nav-dot" data-scene="1" title="Kuis"></div>
-      <div class="nav-dot" data-scene="2" title="Alasan"></div>
-      <div class="nav-dot" data-scene="3" title="Game"></div>
-      <div class="nav-dot" data-scene="4" title="Surat"></div>
-      <div class="nav-dot" data-scene="5" title="Final"></div>
+    <!-- Decorative background -->
+    <div class="bg-decor">
+      <div class="bg-blob b1"></div>
+      <div class="bg-blob b2"></div>
+      <div class="bg-blob b3"></div>
+      <span class="bg-sticker" style="top: 8%; left: 10%; animation-delay: 0s">✨</span>
+      <span class="bg-sticker" style="top: 20%; right: 8%; animation-delay: 1.2s">🌸</span>
+      <span class="bg-sticker" style="bottom: 14%; left: 6%; animation-delay: 2s">🎀</span>
+      <span class="bg-sticker" style="bottom: 24%; right: 12%; animation-delay: 0.6s">⭐</span>
+      <span class="bg-sticker" style="top: 50%; left: 3%; animation-delay: 1.8s">💌</span>
+      <span class="bg-sticker" style="top: 45%; right: 4%; animation-delay: 2.6s">🎈</span>
     </div>
 
-    <!-- Easter Egg -->
-    <button class="easter-egg-btn" id="easterEggBtn" title="🌸 Klik aku!">
-      🌸
-    </button>
-
-    <!-- Easter Egg Modal -->
-    <div class="egg-modal" id="eggModal">
-      <div class="egg-content">
-        <div style="font-size: 3rem; margin-bottom: 14px">🎉</div>
-        <h3
-          style="
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            color: var(--pink-light);
-          "
-        >
-          Kamu Menemukan Easter Egg!
-        </h3>
-        <p
-          style="
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 18px;
-          "
-        >
-          Fun fact: Orang yang bikin ini lebih lama milih emoji yang pas
-          daripada nulis pesannya. 😅<br /><br />
-          Tapi serius deh, <strong>Najwaa</strong> itu beneran bikin dunia lebih
-          berwarna. Seperti taman bunga di tengah kota abu-abu. 🌸
-        </p>
-        <button class="close-egg-btn" onclick="closeEggModal()">
-          Aw, makasih! 🥹
-        </button>
+    <div class="phone-frame" id="phoneFrame">
+      <!-- Status bar -->
+      <div class="status-bar">
+        <span id="statusTime">00:00</span>
+        <span class="icons">
+          <i class="fa-solid fa-signal"></i>
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-battery-full"></i>
+        </span>
       </div>
-    </div>
 
-    <!-- Toast -->
-    <div class="toast-notification" id="toastNotif"></div>
-
-    <!-- ========== SCENE 0: SPLASH ========== -->
-    <div class="page bg-splash active" id="splash">
-      <div class="bg-hearts-container" id="bgHeartsContainer"></div>
-      <div class="splash-inner">
-        <div class="splash-emoji-ring">
-          <span class="splash-center-heart">💕</span>
-          <span class="orbit-emoji">✨</span>
-          <span class="orbit-emoji">🌸</span>
-          <span class="orbit-emoji">⭐</span>
+      <!-- Lockscreen -->
+      <div class="lockscreen" id="lockscreen">
+        <div>
+          <div class="lock-time" id="lockTime">00:00</div>
+          <div class="lock-date" id="lockDate">Memuat tanggal...</div>
         </div>
-        <p
-          class="splash-tagline"
-          style="
-            font-family: var(--font-script);
-            font-size: 1.1rem;
-            color: var(--purple-light);
-            opacity: 0.85;
-          "
-        >
-          Ada sesuatu untukmu...
-        </p>
-        <h1 class="splash-title">Najwaa</h1>
-        <p class="splash-tagline">
-          — sebuah pesan kecil yang dibuat dengan hati —
-        </p>
-        <button class="btn-main" onclick="goToScene(1)" style="margin-top: 4px">
-          <span>Buka Pesannya</span>
-          <span>💌</span>
-        </button>
-        <p class="scroll-hint">ketuk untuk memulai</p>
-      </div>
-    </div>
-
-    <!-- ========== SCENE 1: QUIZ ========== -->
-    <div class="page bg-scene1" id="scene1">
-      <div class="scene1-content">
-        <p
-          class="splash-tagline"
-          style="
-            font-family: var(--font-script);
-            opacity: 0;
-            animation: fadeSlideUp 0.6s 0s forwards;
-          "
-        >
-          Sebelum lanjut...
-        </p>
-        <p class="question-text">Siapa yang paling cantik hari ini? 🤔</p>
-        <div class="answer-options">
-          <button class="answer-btn" onclick="handleAnswer(this, false)">
-            🤷 Entah, aku tidak tahu
-          </button>
-          <button class="answer-btn" onclick="handleAnswer(this, false)">
-            🌸 Bunga di taman sana
-          </button>
-          <button class="answer-btn" onclick="handleAnswer(this, true)">
-            💕 Najwaa, jelas sekali!
-          </button>
-          <button class="answer-btn" onclick="handleAnswer(this, false)">
-            🐈 Kucing tetangga kayaknya
-          </button>
-        </div>
-        <div
-          id="scene1Msg"
-          style="
-            opacity: 0;
-            transition: opacity 0.4s;
-            text-align: center;
-            min-height: 40px;
-          "
-        >
-          <p class="title-script" style="font-size: 1.3rem"></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ========== SCENE 2: REASONS ========== -->
-    <div class="page bg-scene2" id="scene2">
-      <div class="reason-card-container">
-        <p
-          class="reason-counter"
-          style="opacity: 0; animation: fadeSlideUp 0.6s 0.1s forwards"
-        >
-          Ini alasannya kenapa kamu spesial...
-        </p>
-        <div class="progress-dots" id="progressDots">
-          <div class="dot-indicator active"></div>
-          <div class="dot-indicator"></div>
-          <div class="dot-indicator"></div>
-          <div class="dot-indicator"></div>
-          <div class="dot-indicator"></div>
-        </div>
-        <div
-          class="reason-big-number"
-          id="reasonNum"
-          style="opacity: 0; animation: fadeSlideUp 0.6s 0.2s forwards"
-        >
-          01
-        </div>
-        <div class="reason-emoji-display" id="reasonEmoji">💫</div>
-        <div class="reason-text-display" id="reasonText">
-          <span id="reasonTextInner"
-            >Caramu tertawa yang bikin semua orang ikutan bahagia</span
-          >
-        </div>
-        <button class="btn-main" id="reasonBtn" onclick="nextReason()">
-          <span>Selanjutnya</span> <span>→</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- ========== SCENE 3: GAME ========== -->
-    <div class="page bg-scene3" id="scene3">
-      <div class="game-header">
-        <p class="game-title">🎮 Tangkap Hatinya!</p>
-        <p class="game-subtitle">Klik hati pink, hindari yang abu-abu</p>
-      </div>
-      <div class="game-score-bar">
-        <div class="score-item">
-          <div class="score-label">Skor</div>
-          <div class="score-value" id="gameScore">0</div>
-        </div>
-        <div class="score-item">
-          <div class="score-label">Target</div>
-          <div class="score-value">8</div>
-        </div>
-        <div class="score-item">
-          <div class="score-label">Waktu</div>
-          <div class="score-value" id="gameTimer">25</div>
-        </div>
-      </div>
-      <div class="game-area" id="gameArea">
-        <div class="game-instruction-overlay" id="gameInstruction">
-          <span style="font-size: 2.8rem">💕</span>
-          <p>Sentuh hati pink sebanyak-banyaknya!</p>
-          <button
-            class="btn-main"
-            onclick="startGame()"
-            style="pointer-events: all; position: relative; z-index: 5"
-          >
-            Mulai Game 🎮
-          </button>
-        </div>
-      </div>
-      <div class="game-complete-msg" id="gameCompleteMsg"></div>
-      <button
-        class="btn-ghost"
-        id="skipGameBtn"
-        onclick="goToScene(4)"
-        style="display: none"
-      >
-        Lewati Game →
-      </button>
-    </div>
-
-    <!-- ========== SCENE 4: LETTER ========== -->
-    <div class="page bg-scene1 scrollable" id="scene4">
-      <div class="letter-wrapper">
-        <p
-          class="splash-tagline"
-          style="
-            font-family: var(--font-script);
-            opacity: 0;
-            animation: fadeSlideUp 0.6s 0.1s forwards;
-          "
-        >
-          💌 Ini untukmu...
-        </p>
-        <div
-          class="letter-paper"
-          style="opacity: 0; animation: fadeSlideUp 0.7s 0.3s forwards"
-        >
-          <span class="letter-greeting">Hai, Najwaa yang manis~ 🌸</span>
-          <div class="letter-body">
-            <p>
-              Aku tahu kamu mungkin lagi sibuk, atau lagi mager, atau lagi
-              overthinking soal hal-hal kecil yang sebenarnya nggak sebesar yang
-              kamu pikir. 😄
-            </p>
-            <p>
-              Tapi aku mau bilang sesuatu yang sederhana tapi jujur dari dalam
-              hati:
-            </p>
-            <p>
-              <span class="letter-highlight"
-                >Kamu itu bukan "biasa-biasa aja".</span
-              >
-              Kamu itu jenis orang yang bikin hari biasa jadi terasa ada
-              warnanya. Yang bikin orang di sekitarmu tanpa sadar lebih banyak
-              senyum.
-            </p>
-            <p>
-              Caramu peduli, caramu ketawa, bahkan caramu bingung sendiri —
-              semuanya itu hal-hal yang bikin kamu jadi
-              <span class="letter-highlight"
-                >Najwaa yang nggak ada duanya.</span
-              >
-              💕
-            </p>
-            <p>
-              Mungkin hari-harimu nggak selalu mudah. Tapi percaya deh —
-              <span class="letter-highlight"
-                >kamu jauh lebih kuat dari yang kamu kira.</span
-              >
-              Dan jauh lebih berharga dari yang bisa kamu bayangkan.
-            </p>
-            <p>Jadi untuk hari ini, izinkan aku remind kamu satu hal:</p>
-            <p
-              style="
-                text-align: center;
-                font-family: var(--font-script);
-                font-size: 1.4rem;
-                color: var(--pink-light);
-                line-height: 1.6;
-              "
-            >
-              "Ada seseorang yang bersyukur,<br />kamu ada di dunia ini." 🌙
-            </p>
+        <p class="lock-mid">satu pesan random nyasar ke sini... 👀</p>
+        <div class="lock-notif">
+          <div class="icon">🌸</div>
+          <div class="body">
+            <div class="title"><span>Draft ke Najwaa</span><span>sekarang</span></div>
+            <div class="preview">"psst, ada sesuatu nih... buka deh, dijamin gak nyesel (semoga) 😂"</div>
           </div>
-          <span class="letter-sign">— Dengan senyum dan segenap hati 💜</span>
         </div>
-        <p
-          class="splash-tagline"
-          style="opacity: 0; animation: fadeSlideUp 0.6s 0.7s forwards"
-        >
-          ✦ dibuat khusus untukmu, Najwaa ✦
-        </p>
-        <button
-          class="btn-main"
-          onclick="goToScene(5)"
-          style="opacity: 0; animation: fadeSlideUp 0.6s 0.9s forwards"
-        >
-          <span>Ke bagian terakhir</span> <span>✨</span>
-        </button>
+        <p class="lock-hint"><i class="fa-solid fa-chevron-up"></i> ketuk / geser buat buka</p>
       </div>
-    </div>
 
-    <!-- ========== SCENE 5: FINALE ========== -->
-    <div class="page bg-final" id="scene5">
-      <div class="finale-wrapper">
-        <div class="finale-ring">
-          <span class="orbit-star">✨</span>
-          <span class="orbit-star">🌸</span>
-          <span class="orbit-star">⭐</span>
-          <span class="orbit-star">💫</span>
-          <div class="finale-center">💕</div>
+      <!-- Chat header -->
+      <div class="chat-header">
+        <div class="chat-avatar">🌸</div>
+        <div>
+          <div class="chat-name">Najwaa</div>
+          <div class="chat-status" id="chatStatus">draft • belum terkirim</div>
         </div>
-        <h2 class="finale-title" id="finaleTitle">Kamu Luar Biasa, Najwaa</h2>
-        <p class="finale-subtitle" id="finaleSubtitle">
-          Terima kasih sudah jadi dirimu sendiri —<br />itu hadiah yang nggak
-          ternilai 🌸
-        </p>
-        <p
-          class="body-text"
-          style="
-            max-width: 340px;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.65);
-            font-size: 0.92rem;
-          "
-        >
-          Simpan senyumanmu ya. Dunia lebih indah kalau Najwaa senyum. 💜
-        </p>
-        <div class="share-buttons">
-          <button class="share-btn" onclick="handleShare()">
-            <i class="fa-solid fa-share-nodes"></i> Bagikan
-          </button>
-          <button class="share-btn" onclick="replayAll()">
-            <i class="fa-solid fa-rotate"></i> Ulangi
-          </button>
-        </div>
-        <p class="scroll-hint">— selesai dengan penuh cinta —</p>
       </div>
-    </div>
 
-    <!-- Hidden Audio Element (fallback, not used by Web Audio API) -->
-    <audio id="bgMusic" loop preload="auto" style="display: none">
-      <source
-        src="https://cdn.pixabay.com/audio/2022/10/25/audio_946fbd98a3.mp3"
-        type="audio/mpeg"
-      />
-    </audio>
+      <!-- Chat body -->
+      <div class="chat-body" id="chatBody"></div>
+
+      <!-- Game overlay -->
+      <div class="game-overlay" id="gameOverlay">
+        <div class="game-top">
+          <span>🎮 Tangkep Stiker!</span>
+          <span id="gameTimerLabel">12s</span>
+        </div>
+        <div class="game-area" id="gameArea">
+          <div class="game-center-msg" id="gameCenterMsg">
+            <div class="big" id="gameCountdown">3</div>
+            <p>siap-siap, stiker bakal jatuh dari atas. tap secepetnya ya!</p>
+          </div>
+          <div class="game-result-panel" id="gameResultPanel">
+            <div class="score-num" id="gameScoreFinal">0</div>
+            <p id="gameComment"></p>
+            <button class="btn-fun coral" id="gameContinueBtn">Lanjut ke chat →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input bar -->
+      <div class="chat-input-bar">
+        <div class="fake-input" id="fakeInput">lagi ngetik...</div>
+        <div class="send-btn" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></div>
+      </div>
+
+      <!-- Toast -->
+      <div class="toast" id="toast"></div>
+    </div>
 
     <script>
       (function () {
-        // ==================== DOM REFS ====================
-        const pages = [
-          "splash",
-          "scene1",
-          "scene2",
-          "scene3",
-          "scene4",
-          "scene5",
-        ];
-        const totalScenes = pages.length;
-        let currentScene = 0;
-        let isTransitioning = false;
-        let quizAnswered = false;
-        let gameRunning = false;
-        let gameScore = 0;
-        let gameTimerVal = 25;
-        let gameInterval = null;
-        let gameTimerInterval = null;
-        let toastTimer = null;
-        let eggClicks = 0;
-        let musicPlaying = false;
-        let reasonIdx = 0;
-
-        // ==================== CURSOR ====================
-        const cursorMain = document.getElementById("cursorMain");
-        const cursorRing = document.getElementById("cursorRing");
-        let mouseX = 0,
-          mouseY = 0,
-          ringX = 0,
-          ringY = 0;
-        const isTouchDevice =
-          "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-        if (!isTouchDevice) {
-          document.addEventListener("mousemove", (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            cursorMain.style.left = mouseX + "px";
-            cursorMain.style.top = mouseY + "px";
+        // ==================== CLOCK ====================
+        function pad(n) {
+          return n.toString().padStart(2, "0");
+        }
+        function updateClock() {
+          const now = new Date();
+          const time = pad(now.getHours()) + ":" + pad(now.getMinutes());
+          const date = now.toLocaleDateString("id-ID", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
           });
-          function animateRing() {
-            ringX += (mouseX - ringX) * 0.1;
-            ringY += (mouseY - ringY) * 0.1;
-            cursorRing.style.left = ringX + "px";
-            cursorRing.style.top = ringY + "px";
-            requestAnimationFrame(animateRing);
-          }
-          animateRing();
-          document.addEventListener("mousedown", () => {
-            cursorMain.style.transform = "translate(-50%,-50%) scale(0.55)";
-            cursorRing.style.transform = "translate(-50%,-50%) scale(0.8)";
-          });
-          document.addEventListener("mouseup", () => {
-            cursorMain.style.transform = "translate(-50%,-50%) scale(1)";
-            cursorRing.style.transform = "translate(-50%,-50%) scale(1)";
-          });
-          document
-            .querySelectorAll(
-              "button, .nav-dot, .answer-btn, .game-heart, .share-btn, .easter-egg-btn",
-            )
-            .forEach((el) => {
-              el.addEventListener("mouseenter", () =>
-                cursorRing.classList.add("hover"),
-              );
-              el.addEventListener("mouseleave", () =>
-                cursorRing.classList.remove("hover"),
-              );
-            });
-        } else {
-          cursorMain.style.display = "none";
-          cursorRing.style.display = "none";
+          document.getElementById("statusTime").textContent = time;
+          document.getElementById("lockTime").textContent = time;
+          document.getElementById("lockDate").textContent = date;
         }
+        updateClock();
+        setInterval(updateClock, 30000);
 
-        // ==================== PARTICLES ====================
-        const pCanvas = document.getElementById("particle-canvas");
-        const pCtx = pCanvas.getContext("2d");
-        function resizePCanvas() {
-          pCanvas.width = window.innerWidth;
-          pCanvas.height = window.innerHeight;
-        }
-        resizePCanvas();
-        window.addEventListener("resize", resizePCanvas);
-        const PARTICLE_COUNT = 60;
-        const particles = [];
-        const pColors = [
-          "#FF8FAB",
-          "#C084FC",
-          "#FFD6E7",
-          "#FF4D8D",
-          "#E8D5FF",
-          "#FFFFFF",
-          "#ffb3c6",
-        ];
-        class Particle {
-          constructor() {
-            this.reset(true);
-          }
-          reset(initial = false) {
-            this.x = Math.random() * pCanvas.width;
-            this.y = initial
-              ? Math.random() * pCanvas.height
-              : pCanvas.height + 15;
-            this.size = Math.random() * 3.8 + 1;
-            this.speedY = -(Math.random() * 0.7 + 0.18);
-            this.speedX = (Math.random() - 0.5) * 0.35;
-            this.opacity = Math.random() * 0.55 + 0.08;
-            this.color = pColors[Math.floor(Math.random() * pColors.length)];
-            this.type = Math.random() < 0.4 ? "heart" : "circle";
-            this.angle = Math.random() * Math.PI * 2;
-            this.angleSpeed = (Math.random() - 0.5) * 0.018;
-          }
-          update() {
-            this.y += this.speedY;
-            this.x += this.speedX + Math.sin(this.angle) * 0.25;
-            this.angle += this.angleSpeed;
-            this.opacity -= 0.0008;
-            if (this.y < -25 || this.opacity <= 0) this.reset();
-          }
-          draw() {
-            pCtx.save();
-            pCtx.globalAlpha = Math.max(0, this.opacity);
-            pCtx.fillStyle = this.color;
-            if (this.type === "heart") {
-              const s = this.size;
-              pCtx.translate(this.x, this.y);
-              pCtx.beginPath();
-              pCtx.moveTo(0, -s * 0.5);
-              pCtx.bezierCurveTo(
-                s * 0.5,
-                -s * 1.6,
-                s * 2.1,
-                s * 0.25,
-                0,
-                s * 1.5,
-              );
-              pCtx.bezierCurveTo(
-                -s * 2.1,
-                s * 0.25,
-                -s * 0.5,
-                -s * 1.6,
-                0,
-                -s * 0.5,
-              );
-              pCtx.fill();
-            } else {
-              pCtx.beginPath();
-              pCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-              pCtx.fill();
-            }
-            pCtx.restore();
-          }
-        }
-        for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
-        function animateParticles() {
-          pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
-          particles.forEach((p) => {
-            p.update();
-            p.draw();
-          });
-          requestAnimationFrame(animateParticles);
-        }
-        animateParticles();
-
-        // ==================== WEB AUDIO ENGINE ====================
-        let audioCtx = null;
-        let masterGain = null;
-        let musicNodes = [];
-
-        function initAudio() {
-          if (audioCtx) return;
-          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-          masterGain = audioCtx.createGain();
-          masterGain.gain.setValueAtTime(0, audioCtx.currentTime);
-          masterGain.connect(audioCtx.destination);
-        }
-
-        function createReverb(duration, decay) {
-          const len = audioCtx.sampleRate * duration;
-          const buf = audioCtx.createBuffer(2, len, audioCtx.sampleRate);
-          for (let c = 0; c < 2; c++) {
-            const d = buf.getChannelData(c);
-            for (let i = 0; i < len; i++) {
-              d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, decay);
-            }
-          }
-          const conv = audioCtx.createConvolver();
-          conv.buffer = buf;
-          return conv;
-        }
-
-        function createPadNote(freq, startTime, dur, vol) {
-          const osc1 = audioCtx.createOscillator();
-          const osc2 = audioCtx.createOscillator();
-          const osc3 = audioCtx.createOscillator();
-          const gainNode = audioCtx.createGain();
-          const filter = audioCtx.createBiquadFilter();
-
-          osc1.type = "sine";
-          osc2.type = "triangle";
-          osc3.type = "sine";
-
-          osc1.frequency.setValueAtTime(freq, startTime);
-          osc2.frequency.setValueAtTime(freq * 1.001, startTime);
-          osc3.frequency.setValueAtTime(freq * 2.002, startTime);
-
-          filter.type = "lowpass";
-          filter.frequency.setValueAtTime(800, startTime);
-          filter.frequency.linearRampToValueAtTime(1200, startTime + dur * 0.3);
-          filter.frequency.linearRampToValueAtTime(500, startTime + dur);
-          filter.Q.setValueAtTime(1.5, startTime);
-
-          gainNode.gain.setValueAtTime(0, startTime);
-          gainNode.gain.linearRampToValueAtTime(vol, startTime + 0.6);
-          gainNode.gain.setValueAtTime(vol, startTime + dur - 0.8);
-          gainNode.gain.linearRampToValueAtTime(0, startTime + dur);
-
-          osc1.connect(filter);
-          osc2.connect(filter);
-          osc3.connect(filter);
-          filter.connect(gainNode);
-          gainNode.connect(masterGain);
-
-          osc1.start(startTime);
-          osc2.start(startTime);
-          osc3.start(startTime);
-          osc1.stop(startTime + dur + 0.1);
-          osc2.stop(startTime + dur + 0.1);
-          osc3.stop(startTime + dur + 0.1);
-
-          musicNodes.push(osc1, osc2, osc3, gainNode, filter);
-        }
-
-        function createBell(freq, startTime, vol) {
-          const osc = audioCtx.createOscillator();
-          const gainNode = audioCtx.createGain();
-          const filter = audioCtx.createBiquadFilter();
-
-          osc.type = "sine";
-          osc.frequency.setValueAtTime(freq, startTime);
-          osc.frequency.exponentialRampToValueAtTime(
-            freq * 0.998,
-            startTime + 2,
-          );
-
-          filter.type = "highpass";
-          filter.frequency.setValueAtTime(300, startTime);
-
-          gainNode.gain.setValueAtTime(vol, startTime);
-          gainNode.gain.exponentialRampToValueAtTime(0.0001, startTime + 3.5);
-
-          osc.connect(filter);
-          filter.connect(gainNode);
-          gainNode.connect(masterGain);
-
-          osc.start(startTime);
-          osc.stop(startTime + 3.6);
-          musicNodes.push(osc, gainNode, filter);
-        }
-
-        function createBass(freq, startTime, dur, vol) {
-          const osc = audioCtx.createOscillator();
-          const gainNode = audioCtx.createGain();
-          const filter = audioCtx.createBiquadFilter();
-
-          osc.type = "sine";
-          osc.frequency.setValueAtTime(freq, startTime);
-
-          filter.type = "lowpass";
-          filter.frequency.setValueAtTime(180, startTime);
-
-          gainNode.gain.setValueAtTime(0, startTime);
-          gainNode.gain.linearRampToValueAtTime(vol, startTime + 0.08);
-          gainNode.gain.setValueAtTime(vol * 0.6, startTime + dur - 0.1);
-          gainNode.gain.linearRampToValueAtTime(0, startTime + dur);
-
-          osc.connect(filter);
-          filter.connect(gainNode);
-          gainNode.connect(masterGain);
-
-          osc.start(startTime);
-          osc.stop(startTime + dur + 0.05);
-          musicNodes.push(osc, gainNode, filter);
-        }
-
-        const chordFreqs = {
-          D: [146.83, 185.0, 220.0, 277.18],
-          A: [110.0, 138.59, 164.81, 220.0],
-          Bm: [123.47, 146.83, 185.0, 246.94],
-          G: [98.0, 123.47, 146.83, 196.0],
-        };
-        const bassFreqs = { D: 73.42, A: 55.0, Bm: 61.74, G: 49.0 };
-        const bellMelody = [
-          [293.66, 0.0],
-          [329.63, 0.75],
-          [369.99, 1.5],
-          [440.0, 2.5],
-          [369.99, 4.0],
-          [329.63, 5.0],
-          [293.66, 6.0],
-          [246.94, 7.5],
-          [293.66, 9.0],
-          [369.99, 10.0],
-          [440.0, 11.5],
-          [493.88, 13.0],
-          [440.0, 15.0],
-          [369.99, 16.5],
-          [329.63, 18.0],
-          [293.66, 19.5],
-        ];
-
-        const CHORD_DUR = 6.0;
-        const LOOP_DUR = CHORD_DUR * 4;
-        const progression = ["D", "A", "Bm", "G"];
-
-        let loopStartTime = 0;
-        let loopScheduleTimer = null;
-
-        function scheduleLoop(startTime) {
-          const reverb = createReverb(3.5, 2.2);
-          reverb.connect(masterGain);
-
-          progression.forEach((chord, ci) => {
-            const t = startTime + ci * CHORD_DUR;
-            chordFreqs[chord].forEach((freq, fi) => {
-              createPadNote(
-                freq,
-                t + fi * 0.05,
-                CHORD_DUR + 0.5,
-                0.055 - fi * 0.008,
-              );
-            });
-            createBass(bassFreqs[chord], t, CHORD_DUR * 0.8, 0.09);
-          });
-
-          bellMelody.forEach(([freq, offset]) => {
-            createBell(freq, startTime + offset, 0.1);
-          });
-
-          const msUntilNext = (LOOP_DUR - 1) * 1000;
-          loopScheduleTimer = setTimeout(() => {
-            if (musicPlaying) scheduleLoop(audioCtx.currentTime + 0.5);
-          }, msUntilNext);
-        }
-
-        function startMusic() {
-          initAudio();
-          if (audioCtx.state === "suspended") audioCtx.resume();
-          musicPlaying = true;
-          loopStartTime = audioCtx.currentTime + 0.1;
-          masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
-          masterGain.gain.setValueAtTime(
-            masterGain.gain.value,
-            audioCtx.currentTime,
-          );
-          masterGain.gain.linearRampToValueAtTime(
-            1,
-            audioCtx.currentTime + 1.5,
-          );
-          scheduleLoop(loopStartTime);
-          musicToggle.classList.add("playing");
-          showToast("🎵 Musik romantis menyala...");
-        }
-
-        function stopMusic() {
-          musicPlaying = false;
-          clearTimeout(loopScheduleTimer);
-          if (masterGain) {
-            masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
-            masterGain.gain.setValueAtTime(
-              masterGain.gain.value,
-              audioCtx.currentTime,
-            );
-            masterGain.gain.linearRampToValueAtTime(
-              0,
-              audioCtx.currentTime + 1.2,
-            );
-          }
+        // ==================== LOCKSCREEN ====================
+        const lockscreen = document.getElementById("lockscreen");
+        function unlock() {
+          if (lockscreen.classList.contains("unlocked")) return;
+          lockscreen.classList.add("unlocked");
           setTimeout(() => {
-            musicNodes.forEach((n) => {
-              try {
-                n.disconnect();
-              } catch (e) {}
-            });
-            musicNodes = [];
-          }, 1500);
-          musicToggle.classList.remove("playing");
-          showToast("🔇 Musik dimatikan");
+            lockscreen.style.display = "none";
+            runScript();
+          }, 550);
         }
-
-        const musicToggle = document.getElementById("musicToggle");
-        function toggleMusic() {
-          if (musicPlaying) {
-            stopMusic();
-          } else {
-            startMusic();
-          }
-        }
-        musicToggle.addEventListener("click", toggleMusic);
-
-        // Auto-start on first interaction
-        let musicInitialized = false;
-        function initMusicOnInteraction() {
-          if (musicInitialized) return;
-          musicInitialized = true;
-          startMusic();
-        }
-        document.addEventListener("click", initMusicOnInteraction, {
-          once: true,
-        });
-        document.addEventListener("touchstart", initMusicOnInteraction, {
-          once: true,
-        });
-
-        // ==================== BG FLOATING HEARTS ====================
-        const bgHeartsContainer = document.getElementById("bgHeartsContainer");
-        const heartEmojis = ["💕", "💜", "🌸", "✨", "💫", "💗", "🌷", "🩷"];
-        for (let i = 0; i < 20; i++) {
-          const h = document.createElement("div");
-          h.className = "bg-floating-heart";
-          h.textContent = heartEmojis[i % heartEmojis.length];
-          h.style.left = Math.random() * 100 + "%";
-          h.style.bottom = "-60px";
-          h.style.fontSize = Math.random() * 1.4 + 0.7 + "rem";
-          h.style.animationDuration = Math.random() * 12 + 10 + "s";
-          h.style.animationDelay = Math.random() * 12 + "s";
-          bgHeartsContainer.appendChild(h);
-        }
-
-        // ==================== SCENE NAVIGATION ====================
-        const navDots = document.querySelectorAll(".nav-dot");
-        navDots.forEach((dot) => {
-          dot.addEventListener("click", () => {
-            const sceneIdx = parseInt(dot.getAttribute("data-scene"));
-            goToScene(sceneIdx);
-          });
-        });
-
-        function goToScene(idx) {
-          if (isTransitioning) return;
-          if (idx < 0 || idx >= totalScenes) return;
-          isTransitioning = true;
-          const curEl = document.getElementById(pages[currentScene]);
-          if (curEl) {
-            curEl.classList.remove("active");
-            curEl.classList.add("exit");
-          }
-          setTimeout(() => {
-            if (curEl) curEl.classList.remove("exit");
-            currentScene = idx;
-            const newEl = document.getElementById(pages[currentScene]);
-            if (newEl) newEl.classList.add("active");
-            updateNavDots();
-            if (idx === 2) initReasons();
-            if (idx === 5) initFinale();
-            isTransitioning = false;
-          }, 500);
-        }
-
-        function updateNavDots() {
-          navDots.forEach((d, i) =>
-            d.classList.toggle("active", i === currentScene),
-          );
-        }
-
-        // ==================== SCENE 1: QUIZ ====================
-        function handleAnswer(btn, isCorrect) {
-          if (quizAnswered) return;
-          if (isCorrect) {
-            quizAnswered = true;
-            btn.classList.add("correct");
-            const msg = document.getElementById("scene1Msg");
-            msg.style.opacity = "1";
-            msg.querySelector("p").textContent =
-              "Jawaban yang tepat! 🥳 Kamu memang yang terbaik!";
-            spawnHeartBurst(
-              btn.getBoundingClientRect().left + btn.offsetWidth / 2,
-              btn.getBoundingClientRect().top,
-            );
-            showToast("✅ Benar! Tentu saja Najwaa!");
-            setTimeout(() => goToScene(2), 1600);
-          } else {
-            btn.classList.add("wrong");
-            showToast("❌ Hmm, coba lagi! 😄");
-            setTimeout(() => btn.classList.remove("wrong"), 600);
-          }
-        }
-
-        // ==================== SCENE 2: REASONS ====================
-        const reasons = [
-          {
-            num: "01",
-            emoji: "😊",
-            text: "Caramu tertawa yang bikin semua orang ikutan bahagia",
+        lockscreen.addEventListener("click", unlock);
+        lockscreen.addEventListener(
+          "touchend",
+          (e) => {
+            e.preventDefault();
+            unlock();
           },
-          {
-            num: "02",
-            emoji: "💜",
-            text: "Hatimu yang tulus, nggak pernah setengah-setengah",
-          },
-          {
-            num: "03",
-            emoji: "🌟",
-            text: "Caramu kuat menghadapi hari-hari yang berat",
-          },
-          {
-            num: "04",
-            emoji: "🌸",
-            text: "Kehadiranmu yang bikin suasana jadi lebih hangat",
-          },
-          {
-            num: "05",
-            emoji: "✨",
-            text: "Kamu jadi dirimu sendiri — dan itu hal paling indah",
-          },
-        ];
-
-        function initReasons() {
-          reasonIdx = 0;
-          updateReasonDisplay();
-          updateProgressDots();
-        }
-
-        function updateReasonDisplay() {
-          const r = reasons[reasonIdx];
-          const numEl = document.getElementById("reasonNum");
-          const emojiEl = document.getElementById("reasonEmoji");
-          const textEl = document.getElementById("reasonTextInner");
-          const btn = document.getElementById("reasonBtn");
-          numEl.style.opacity = "0";
-          emojiEl.style.opacity = "0";
-          textEl.style.opacity = "0";
-          setTimeout(() => {
-            numEl.textContent = r.num;
-            emojiEl.textContent = r.emoji;
-            textEl.textContent = r.text;
-            numEl.style.transition = "opacity 0.4s";
-            emojiEl.style.transition = "opacity 0.4s";
-            textEl.style.transition = "opacity 0.4s";
-            numEl.style.opacity = "1";
-            emojiEl.style.animation = "none";
-            requestAnimationFrame(() => {
-              emojiEl.style.animation =
-                "popIn 0.4s cubic-bezier(0.34,1.56,0.64,1)";
-              emojiEl.style.opacity = "1";
-            });
-            textEl.style.opacity = "1";
-          }, 180);
-          if (reasonIdx === reasons.length - 1) {
-            btn.innerHTML = "<span>Lanjut ke Game!</span> <span>🎮</span>";
-          } else {
-            btn.innerHTML = "<span>Selanjutnya</span> <span>→</span>";
-          }
-        }
-
-        function updateProgressDots() {
-          const dots = document.querySelectorAll(
-            "#progressDots .dot-indicator",
-          );
-          dots.forEach((d, i) => {
-            d.classList.remove("active", "done");
-            if (i < reasonIdx) d.classList.add("done");
-            else if (i === reasonIdx) d.classList.add("active");
-          });
-        }
-
-        function nextReason() {
-          reasonIdx++;
-          if (reasonIdx >= reasons.length) {
-            goToScene(3);
-            return;
-          }
-          updateReasonDisplay();
-          updateProgressDots();
-        }
-
-        // ==================== SCENE 3: GAME ====================
-        function startGame() {
-          document.getElementById("gameInstruction").style.display = "none";
-          document.getElementById("skipGameBtn").style.display = "flex";
-          gameScore = 0;
-          gameTimerVal = 25;
-          gameRunning = true;
-          document.getElementById("gameScore").textContent = "0";
-          document.getElementById("gameTimer").textContent = "25";
-          document.getElementById("gameCompleteMsg").textContent = "";
-          const area = document.getElementById("gameArea");
-          area.querySelectorAll(".game-heart").forEach((h) => h.remove());
-          gameInterval = setInterval(spawnGameHeart, 850);
-          gameTimerInterval = setInterval(() => {
-            gameTimerVal--;
-            document.getElementById("gameTimer").textContent = gameTimerVal;
-            if (gameTimerVal <= 0) endGame(false);
-          }, 1000);
-        }
-
-        function spawnGameHeart() {
-          if (!gameRunning) return;
-          const area = document.getElementById("gameArea");
-          const isBad = Math.random() < 0.26;
-          const heart = document.createElement("div");
-          heart.className = "game-heart" + (isBad ? " bad" : "");
-          heart.textContent = isBad
-            ? "🖤"
-            : ["💕", "💗", "💓", "💖"][Math.floor(Math.random() * 4)];
-          const areaW = area.clientWidth - 55;
-          const areaH = area.clientHeight - 55;
-          heart.style.left = Math.random() * areaW + 8 + "px";
-          heart.style.top = Math.random() * areaH + 8 + "px";
-          heart.addEventListener("click", (e) => {
-            e.stopPropagation();
-            catchHeart(heart, isBad);
-          });
-          heart.addEventListener(
-            "touchstart",
-            (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              catchHeart(heart, isBad);
-            },
-            { passive: false },
-          );
-          area.appendChild(heart);
-          setTimeout(() => {
-            if (heart.parentNode) heart.remove();
-          }, 2400);
-        }
-
-        function catchHeart(el, isBad) {
-          if (!gameRunning) return;
-          if (isBad) {
-            gameScore = Math.max(0, gameScore - 1);
-            showToast("💔 Ups! Salah tangkap!");
-            el.style.transform = "scale(0) rotate(180deg)";
-          } else {
-            gameScore++;
-            const rect = el.getBoundingClientRect();
-            spawnHeartBurst(
-              rect.left + rect.width / 2,
-              rect.top + rect.height / 2,
-            );
-            el.style.transform = "scale(0) rotate(20deg)";
-          }
-          document.getElementById("gameScore").textContent = gameScore;
-          setTimeout(() => el.remove(), 250);
-          if (gameScore >= 8) endGame(true);
-        }
-
-        function endGame(won = false) {
-          gameRunning = false;
-          clearInterval(gameInterval);
-          clearInterval(gameTimerInterval);
-          const area = document.getElementById("gameArea");
-          area.querySelectorAll(".game-heart").forEach((h) => h.remove());
-          const msg = document.getElementById("gameCompleteMsg");
-          if (won || gameScore >= 5) {
-            msg.textContent = `🎉 Skor kamu ${gameScore}! Sama seperti kamu — selalu melebihi ekspektasi! 💕`;
-            launchConfetti();
-          } else {
-            msg.textContent = `Skor ${gameScore}. Nggak apa-apa, kamu tetap juara di hatiku! 💜`;
-          }
-          setTimeout(() => goToScene(4), 2200);
-        }
-
-        // ==================== SCENE 5: FINALE ====================
-        function initFinale() {
-          launchConfetti();
-          typewriterEffect("finaleTitle", "Kamu Luar Biasa, Najwaa ✨", 55);
-        }
-
-        function typewriterEffect(elementId, text, speed) {
-          const el = document.getElementById(elementId);
-          el.textContent = "";
-          let i = 0;
-          const cursor = document.createElement("span");
-          cursor.className = "typewriter-cursor";
-          el.appendChild(cursor);
-          const interval = setInterval(() => {
-            if (i < text.length) {
-              el.insertBefore(document.createTextNode(text[i]), cursor);
-              i++;
-            } else {
-              clearInterval(interval);
-              setTimeout(() => cursor.remove(), 1800);
-            }
-          }, speed);
-        }
-
-        // ==================== CONFETTI ====================
-        const cCanvas = document.getElementById("confetti-canvas");
-        const cCtx = cCanvas.getContext("2d");
-        function resizeCCanvas() {
-          cCanvas.width = window.innerWidth;
-          cCanvas.height = window.innerHeight;
-        }
-        resizeCCanvas();
-        window.addEventListener("resize", resizeCCanvas);
-        let confettiPieces = [];
-        let confettiActive = false;
-        class Confetti {
-          constructor() {
-            this.x = Math.random() * cCanvas.width;
-            this.y = Math.random() * -120;
-            this.size = Math.random() * 9 + 4;
-            this.speedY = Math.random() * 3 + 1.5;
-            this.speedX = (Math.random() - 0.5) * 2.5;
-            this.rotation = Math.random() * 360;
-            this.rotSpeed = (Math.random() - 0.5) * 6;
-            this.color = [
-              "#FF4D8D",
-              "#C084FC",
-              "#FFD6E7",
-              "#FF8FAB",
-              "#E8D5FF",
-              "#FFFFFF",
-              "#FFD700",
-              "#ffb3c6",
-            ][Math.floor(Math.random() * 8)];
-            this.shape = ["rect", "circle", "heart"][
-              Math.floor(Math.random() * 3)
-            ];
-            this.opacity = 1;
-          }
-          update() {
-            this.y += this.speedY;
-            this.x += this.speedX + Math.sin(this.y * 0.02) * 0.5;
-            this.rotation += this.rotSpeed;
-            if (this.y > cCanvas.height) this.opacity = 0;
-          }
-          draw() {
-            cCtx.save();
-            cCtx.globalAlpha = this.opacity;
-            cCtx.fillStyle = this.color;
-            cCtx.translate(this.x, this.y);
-            cCtx.rotate((this.rotation * Math.PI) / 180);
-            if (this.shape === "rect") {
-              cCtx.fillRect(
-                -this.size / 2,
-                -this.size / 4,
-                this.size,
-                this.size / 2,
-              );
-            } else if (this.shape === "circle") {
-              cCtx.beginPath();
-              cCtx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
-              cCtx.fill();
-            } else {
-              const s = this.size * 0.4;
-              cCtx.beginPath();
-              cCtx.moveTo(0, -s * 0.5);
-              cCtx.bezierCurveTo(s * 0.5, -s * 1.5, s * 2, s * 0.2, 0, s * 1.4);
-              cCtx.bezierCurveTo(
-                -s * 2,
-                s * 0.2,
-                -s * 0.5,
-                -s * 1.5,
-                0,
-                -s * 0.5,
-              );
-              cCtx.fill();
-            }
-            cCtx.restore();
-          }
-        }
-        function launchConfetti() {
-          confettiPieces = [];
-          for (let i = 0; i < 130; i++) {
-            const c = new Confetti();
-            c.y = Math.random() * -250 - i * 1.5;
-            confettiPieces.push(c);
-          }
-          confettiActive = true;
-          animateConfetti();
-        }
-        function animateConfetti() {
-          if (!confettiActive) return;
-          cCtx.clearRect(0, 0, cCanvas.width, cCanvas.height);
-          confettiPieces = confettiPieces.filter((c) => c.opacity > 0);
-          confettiPieces.forEach((c) => {
-            c.update();
-            c.draw();
-          });
-          if (confettiPieces.length > 0) {
-            requestAnimationFrame(animateConfetti);
-          } else {
-            confettiActive = false;
-            cCtx.clearRect(0, 0, cCanvas.width, cCanvas.height);
-          }
-        }
-
-        // ==================== HEART BURST ====================
-        function spawnHeartBurst(x, y) {
-          for (let i = 0; i < 10; i++) {
-            const h = document.createElement("div");
-            h.textContent = ["💕", "✨", "💗", "🌸", "💖"][
-              Math.floor(Math.random() * 5)
-            ];
-            h.style.cssText = `position:fixed;left:${x}px;top:${y}px;font-size:${Math.random() * 1.4 + 0.8}rem;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);animation:burstAway 0.85s ease forwards;--dx:${(Math.random() - 0.5) * 130}px;--dy:${-(Math.random() * 90 + 30)}px;`;
-            document.body.appendChild(h);
-            setTimeout(() => h.remove(), 850);
-          }
-        }
+          { passive: false }
+        );
 
         // ==================== TOAST ====================
-        function showToast(msg) {
-          const t = document.getElementById("toastNotif");
+        let toastTimer = null;
+        function showToast(msg, duration = 2200) {
+          const t = document.getElementById("toast");
           t.textContent = msg;
           t.classList.add("show");
           clearTimeout(toastTimer);
-          toastTimer = setTimeout(() => t.classList.remove("show"), 2300);
+          toastTimer = setTimeout(() => t.classList.remove("show"), duration);
         }
 
-        // ==================== EASTER EGG ====================
-        document
-          .getElementById("easterEggBtn")
-          .addEventListener("click", () => {
-            eggClicks++;
-            if (eggClicks >= 3) {
-              document.getElementById("eggModal").classList.add("visible");
-              eggClicks = 0;
-            } else {
-              showToast(`Klik ${3 - eggClicks} kali lagi... 🌸`);
-            }
-          });
-        function closeEggModal() {
-          document.getElementById("eggModal").classList.remove("visible");
+        // ==================== FAKE INPUT PLACEHOLDER CYCLE ====================
+        const fakePlaceholders = [
+          "lagi ngetik...",
+          "eh btw...",
+          "...",
+          "gajadi deh, gapapa",
+          "kirim stiker aja ya 😅",
+          "besok deh lanjutnya",
+          "...",
+          "ah lupakan 😂",
+        ];
+        let fpIdx = 0;
+        const fakeInput = document.getElementById("fakeInput");
+        setInterval(() => {
+          fakeInput.classList.add("fade");
+          setTimeout(() => {
+            fpIdx = (fpIdx + 1) % fakePlaceholders.length;
+            fakeInput.textContent = fakePlaceholders[fpIdx];
+            fakeInput.classList.remove("fade");
+          }, 350);
+        }, 2600);
+        document.getElementById("sendBtn").addEventListener("click", () => {
+          showToast("tenang, pesan ini emang udah 'terkirim' kok 😉");
+        });
+
+        // ==================== CHAT ENGINE ====================
+        const chatBody = document.getElementById("chatBody");
+        const chatStatus = document.getElementById("chatStatus");
+
+        function wait(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+        function scrollDown() {
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        function typingDelay(text) {
+          return Math.min(1700, 450 + text.length * 16);
         }
 
-        // ==================== SHARE ====================
-        function handleShare() {
-          if (navigator.share) {
-            navigator
-              .share({
-                title: "Pesan Spesial untuk Najwaa 💕",
-                text: "Ada sesuatu yang dibuat khusus untukmu!",
-                url: window.location.href,
-              })
-              .catch(() => {});
-          } else {
-            navigator.clipboard
-              .writeText(window.location.href)
-              .then(() => {
-                showToast("📋 Link disalin! Bagikan ke Najwaa 💕");
-              })
-              .catch(() => {
-                showToast("Salin link dari address bar ya! 💕");
+        async function showTyping(durationFactorText) {
+          const indicator = document.createElement("div");
+          indicator.className = "typing-indicator";
+          indicator.innerHTML =
+            '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+          chatBody.appendChild(indicator);
+          scrollDown();
+          await wait(typingDelay(durationFactorText || ""));
+          indicator.remove();
+        }
+
+        async function sendText(text, isSticker) {
+          await showTyping(text);
+          const msg = document.createElement("div");
+          msg.className = "msg" + (isSticker ? " sticker-msg" : "");
+          msg.textContent = text;
+          chatBody.appendChild(msg);
+          scrollDown();
+          await wait(380);
+        }
+
+        async function sendCard(buildFn, typingHint) {
+          await showTyping(typingHint || "....");
+          const card = document.createElement("div");
+          card.className = "app-card";
+          buildFn(card);
+          chatBody.appendChild(card);
+          scrollDown();
+          return card;
+        }
+
+        // ==================== QUIZ ====================
+        function renderQuiz(card, item) {
+          card.innerHTML = "";
+          const title = document.createElement("div");
+          title.className = "app-card-title";
+          title.innerHTML = "❓ " + item.question;
+          card.appendChild(title);
+
+          return new Promise((resolve) => {
+            const optsWrap = document.createElement("div");
+            optsWrap.style.marginTop = "10px";
+            item.options.forEach((opt) => {
+              const btn = document.createElement("button");
+              btn.className = "quiz-opt";
+              btn.textContent = opt.label;
+              btn.addEventListener("click", async () => {
+                const all = optsWrap.querySelectorAll(".quiz-opt");
+                all.forEach((b) => (b.disabled = true));
+                btn.classList.add("selected");
+                scrollDown();
+                await wait(350);
+                await sendText(opt.reaction, false);
+                resolve();
               });
+              optsWrap.appendChild(btn);
+            });
+            card.appendChild(optsWrap);
+            scrollDown();
+          });
+        }
+
+        // ==================== SLOT MACHINE ====================
+        const slotReels = [
+          ["Si Paling", "Ratu", "Juara Nasional", "Legenda", "MVP", "Bintang Utama", "Sultan"],
+          [
+            "Baik Tanpa Diminta",
+            "Rajin Tapi Mager",
+            "Auto Bikin Ceria",
+            "Ketawa Receh Sejagat",
+            "Pinter Tapi Modest",
+            "Spesial Tanpa Drama",
+            "Baper Tapi Gemes",
+            "Random Tapi Asik",
+            "Pejuang Deadline",
+          ],
+          ["🌸", "✨", "🏆", "😄", "💯", "🔥", "🎉", "🌟", "💖"],
+        ];
+        let lastSlotResult = "";
+
+        function renderSlot(card) {
+          card.innerHTML = "";
+          const title = document.createElement("div");
+          title.className = "app-card-title";
+          title.innerHTML = "🎰 Generator Julukan Resmi";
+          card.appendChild(title);
+
+          const sub = document.createElement("div");
+          sub.className = "app-card-sub";
+          sub.textContent =
+            "tekan tombolnya, biar mesin nentuin julukan resmi buat Najwaa hari ini.";
+          card.appendChild(sub);
+
+          const row = document.createElement("div");
+          row.className = "slot-row";
+          const reelEls = slotReels.map((list) => {
+            const reel = document.createElement("div");
+            reel.className = "slot-reel";
+            reel.textContent = list[0];
+            row.appendChild(reel);
+            return reel;
+          });
+          card.appendChild(row);
+
+          const result = document.createElement("div");
+          result.className = "slot-result";
+          result.textContent = "ketuk \"Putar!\" untuk mulai ✨";
+          card.appendChild(result);
+
+          const actions = document.createElement("div");
+          actions.className = "slot-actions";
+          const spinBtn = document.createElement("button");
+          spinBtn.className = "btn-fun coral";
+          spinBtn.textContent = "Putar! 🎰";
+          const nextBtn = document.createElement("button");
+          nextBtn.className = "btn-fun";
+          nextBtn.textContent = "Lanjut →";
+          nextBtn.hidden = true;
+          actions.appendChild(spinBtn);
+          actions.appendChild(nextBtn);
+          card.appendChild(actions);
+
+          return new Promise((resolve) => {
+            spinBtn.addEventListener("click", () => {
+              spinBtn.disabled = true;
+              spinBtn.style.opacity = "0.6";
+              reelEls.forEach((reel, i) => {
+                let ticks = 0;
+                const maxTicks = 12 + i * 6;
+                const interval = setInterval(() => {
+                  const list = slotReels[i];
+                  reel.textContent = list[Math.floor(Math.random() * list.length)];
+                  ticks++;
+                  if (ticks >= maxTicks) {
+                    clearInterval(interval);
+                    if (i === reelEls.length - 1) {
+                      lastSlotResult = reelEls.map((r) => r.textContent).join(" ");
+                      result.textContent = "Hasil resmi: " + lastSlotResult;
+                      spinBtn.disabled = false;
+                      spinBtn.style.opacity = "1";
+                      spinBtn.textContent = "Putar lagi! 🎰";
+                      nextBtn.hidden = false;
+                      scrollDown();
+                    }
+                  }
+                }, 60);
+              });
+            });
+            nextBtn.addEventListener("click", () => resolve());
+          });
+        }
+
+        // ==================== MINI GAME ====================
+        const gameStickers = ["🌸", "✨", "💖", "🎀", "⭐", "💌", "🍓", "🎈", "🎉", "💫"];
+        let gameScore = 0;
+
+        function getGameComment(score) {
+          if (score === 0) return "wkwk santuy banget, 0 itu juga pencapaian sih 😂";
+          if (score <= 4) return "lumayan! refleksnya standar manusia normal kok 👍";
+          if (score <= 9) return "wih jago, jangan-jangan emang jago main hp ya 😏";
+          return "GILA INI MAH PRO PLAYER, hormat dulu 🫡";
+        }
+
+        function playGame() {
+          return new Promise((resolve) => {
+            const overlay = document.getElementById("gameOverlay");
+            const area = document.getElementById("gameArea");
+            const centerMsg = document.getElementById("gameCenterMsg");
+            const countdownEl = document.getElementById("gameCountdown");
+            const timerLabel = document.getElementById("gameTimerLabel");
+            const resultPanel = document.getElementById("gameResultPanel");
+            const scoreFinalEl = document.getElementById("gameScoreFinal");
+            const commentEl = document.getElementById("gameComment");
+            const continueBtn = document.getElementById("gameContinueBtn");
+
+            gameScore = 0;
+            resultPanel.classList.remove("show");
+            centerMsg.style.display = "flex";
+            timerLabel.textContent = "12s";
+            overlay.classList.add("active");
+
+            let count = 3;
+            countdownEl.textContent = count;
+            const countdownInterval = setInterval(() => {
+              count--;
+              if (count > 0) {
+                countdownEl.textContent = count;
+              } else if (count === 0) {
+                countdownEl.textContent = "GO!";
+              } else {
+                clearInterval(countdownInterval);
+                centerMsg.style.display = "none";
+                startFalling();
+              }
+            }, 600);
+
+            let spawnInterval, timeInterval;
+            function startFalling() {
+              let timeLeft = 12;
+              timerLabel.textContent = timeLeft + "s";
+              timeInterval = setInterval(() => {
+                timeLeft--;
+                timerLabel.textContent = Math.max(timeLeft, 0) + "s";
+                if (timeLeft <= 0) {
+                  clearInterval(timeInterval);
+                  clearInterval(spawnInterval);
+                  setTimeout(endGame, 900);
+                }
+              }, 1000);
+
+              spawnInterval = setInterval(() => {
+                spawnSticker();
+              }, 550);
+            }
+
+            function spawnSticker() {
+              const el = document.createElement("div");
+              el.className = "game-sticker";
+              el.textContent = gameStickers[Math.floor(Math.random() * gameStickers.length)];
+              const left = Math.random() * 82;
+              el.style.left = left + "%";
+              const duration = 2.6 + Math.random() * 1.8;
+              el.style.animationDuration = duration + "s";
+              el.addEventListener("click", () => {
+                gameScore++;
+                const pop = document.createElement("div");
+                pop.className = "score-pop";
+                pop.textContent = "+1";
+                pop.style.left = el.style.left;
+                pop.style.top = el.style.top || "10%";
+                area.appendChild(pop);
+                setTimeout(() => pop.remove(), 650);
+                el.remove();
+              });
+              area.appendChild(el);
+              setTimeout(() => el.remove(), duration * 1000 + 100);
+            }
+
+            function endGame() {
+              overlay.querySelectorAll(".game-sticker").forEach((s) => s.remove());
+              scoreFinalEl.textContent = gameScore;
+              commentEl.textContent = getGameComment(gameScore);
+              resultPanel.classList.add("show");
+            }
+
+            continueBtn.addEventListener(
+              "click",
+              () => {
+                overlay.classList.remove("active");
+                resolve(gameScore);
+              },
+              { once: true }
+            );
+          });
+        }
+
+        function renderGame(card) {
+          card.innerHTML = "";
+          const title = document.createElement("div");
+          title.className = "app-card-title";
+          title.innerHTML = "🎮 Mini Game: Tangkep Stiker!";
+          card.appendChild(title);
+
+          const sub = document.createElement("div");
+          sub.className = "app-card-sub";
+          sub.textContent =
+            "stiker bakal jatuh dari atas, tap secepetnya sebelum nyentuh dasar. 12 detik aja, gas!";
+          card.appendChild(sub);
+
+          const btn = document.createElement("button");
+          btn.className = "btn-fun teal full";
+          btn.textContent = "Main (12 detik) 🎮";
+          card.appendChild(btn);
+
+          return new Promise((resolve) => {
+            btn.addEventListener("click", async () => {
+              btn.disabled = true;
+              btn.textContent = "lagi main...";
+              const score = await playGame();
+              btn.textContent = "Skor kamu: " + score + " ⭐";
+              resolve(score);
+            });
+          });
+        }
+
+        // ==================== LETTER ====================
+        function renderLetter(card) {
+          card.innerHTML = "";
+          const title = document.createElement("div");
+          title.className = "app-card-title";
+          title.innerHTML = "💌 Pesan Terakhir";
+          card.appendChild(title);
+
+          const body = document.createElement("div");
+          body.className = "letter-text";
+          body.innerHTML =
+            "<p>oke, mode receh off bentar ya (jarang-jarang nih, nikmatin aja 😂)</p>" +
+            '<p>jujur, ini dibuat bukan karena ada momen spesial atau alasan besar. cuma karena kadang suka kepikiran buat say hi ke Najwaa, tapi pas udah di kolom chat, tiba-tiba bingung sendiri mau ngomong apa, takut keliatan aneh atau ganggu, akhirnya gajadi & cuma jadi draft kosong.</p>' +
+            '<p>jadi anggep aja ini versi "say hi" yang muter-muter banget, tapi at least beneran kekirim 😆</p>' +
+            "<p>makasih ya udah jadi salah satu orang yang asik diajak ngobrol (kalo lagi berani chat duluan 😂), yang tanpa sadar bikin obrolan random jadi lebih seru.</p>" +
+            "<p>semoga harimu lancar, drama-nya dikit, dan tetep jadi Najwaa yang random &amp; seru kayak biasanya 🌸</p>" +
+            '<span class="sign">— dari seseorang yang draft chat-nya lebih banyak daripada yang terkirim 😅</span>';
+          card.appendChild(body);
+
+          const btn = document.createElement("button");
+          btn.className = "btn-fun coral full";
+          btn.style.marginTop = "14px";
+          btn.textContent = "Lanjut →";
+          card.appendChild(btn);
+
+          return new Promise((resolve) => {
+            btn.addEventListener("click", () => resolve());
+          });
+        }
+
+        // ==================== FINALE ====================
+        function spawnCelebration() {
+          const pieces = ["🌸", "✨", "💖", "🎉", "⭐", "🎈", "💌", "🌟"];
+          for (let i = 0; i < 22; i++) {
+            const el = document.createElement("div");
+            el.className = "confetti-piece";
+            el.textContent = pieces[Math.floor(Math.random() * pieces.length)];
+            el.style.left = Math.random() * 92 + "%";
+            el.style.animationDelay = Math.random() * 0.6 + "s";
+            el.style.fontSize = 1.1 + Math.random() * 1.2 + "rem";
+            document.getElementById("phoneFrame").appendChild(el);
+            setTimeout(() => el.remove(), 3200);
           }
         }
 
-        function replayAll() {
-          quizAnswered = false;
-          document
-            .querySelectorAll(".answer-btn")
-            .forEach((b) => b.classList.remove("correct", "wrong"));
-          document.getElementById("scene1Msg").style.opacity = "0";
-          document.getElementById("gameInstruction").style.display = "flex";
-          document.getElementById("skipGameBtn").style.display = "none";
-          document.getElementById("gameCompleteMsg").textContent = "";
-          document.getElementById("gameScore").textContent = "0";
-          document.getElementById("gameTimer").textContent = "25";
-          clearInterval(gameInterval);
-          clearInterval(gameTimerInterval);
-          gameRunning = false;
-          const area = document.getElementById("gameArea");
-          if (area)
-            area.querySelectorAll(".game-heart").forEach((h) => h.remove());
-          goToScene(0);
-        }
+        function renderFinale(card, gameScore) {
+          card.innerHTML = "";
+          const title = document.createElement("div");
+          title.className = "app-card-title";
+          title.innerHTML = "🎁 Paket Stiker buat Najwaa";
+          card.appendChild(title);
 
-        // ==================== KEYBOARD ====================
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "ArrowRight" || e.key === "ArrowDown")
-            goToScene(currentScene + 1);
-          if (e.key === "ArrowLeft" || e.key === "ArrowUp")
-            goToScene(currentScene - 1);
-          if (e.key === "m" || e.key === "M") toggleMusic();
-        });
+          const sub = document.createElement("div");
+          sub.className = "app-card-sub";
+          sub.textContent = "ambil semua, gratis, gak ada syarat & ketentuan 😄";
+          card.appendChild(sub);
 
-        // ==================== SWIPE (non-game scenes) ====================
-        let touchStartX = 0,
-          touchStartY = 0;
-        document.addEventListener(
-          "touchstart",
-          (e) => {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-          },
-          { passive: true },
-        );
-        document.addEventListener(
-          "touchend",
-          (e) => {
-            if (currentScene === 3 && gameRunning) return;
-            const dx = e.changedTouches[0].clientX - touchStartX;
-            const dy = e.changedTouches[0].clientY - touchStartY;
-            if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 55) {
-              if (dx < 0) goToScene(currentScene + 1);
-              else goToScene(currentScene - 1);
-            }
-          },
-          { passive: true },
-        );
-
-        // ==================== PARALLAX ON GLASS CARDS ====================
-        if (!isTouchDevice) {
-          document.addEventListener("mousemove", (e) => {
-            const xRatio = (e.clientX / window.innerWidth - 0.5) * 2;
-            const yRatio = (e.clientY / window.innerHeight - 0.5) * 2;
-            document
-              .querySelectorAll(".glass-card, .letter-paper")
-              .forEach((el) => {
-                el.style.transform = `perspective(1000px) rotateY(${xRatio * 2.5}deg) rotateX(${-yRatio * 2.5}deg)`;
-              });
+          const grid = document.createElement("div");
+          grid.className = "sticker-grid";
+          const emojis = ["🌸", "✨", "💖", "🎉", "🏆", "🎈", "⭐", "💌"];
+          emojis.forEach((e) => {
+            const cell = document.createElement("div");
+            cell.className = "sticker-cell";
+            cell.textContent = e;
+            grid.appendChild(cell);
           });
+          // bonus personalized cells
+          const bonus1 = document.createElement("div");
+          bonus1.className = "sticker-cell small-text";
+          bonus1.textContent = "🎰 " + (lastSlotResult || "Si Paling Spesial 🌸");
+          grid.appendChild(bonus1);
+          const bonus2 = document.createElement("div");
+          bonus2.className = "sticker-cell small-text";
+          bonus2.textContent = "🎮 Skor: " + gameScore;
+          grid.appendChild(bonus2);
+          card.appendChild(grid);
+
+          const actions = document.createElement("div");
+          actions.className = "finale-actions";
+          const shareBtn = document.createElement("button");
+          shareBtn.className = "btn-fun coral";
+          shareBtn.innerHTML = '<i class="fa-solid fa-share-nodes"></i> Bagikan';
+          shareBtn.addEventListener("click", () => {
+            if (navigator.share) {
+              navigator
+                .share({
+                  title: "untuk Najwaa 🌸",
+                  text: "ada pesan random buat kamu, coba buka deh~",
+                  url: window.location.href,
+                })
+                .catch(() => {});
+            } else {
+              navigator.clipboard
+                .writeText(window.location.href)
+                .then(() => showToast("📋 link disalin! kirim ke Najwaa~"))
+                .catch(() => showToast("salin link dari address bar ya 💕"));
+            }
+          });
+          const replayBtn = document.createElement("button");
+          replayBtn.className = "btn-fun";
+          replayBtn.innerHTML = '<i class="fa-solid fa-rotate"></i> Ulangi';
+          replayBtn.addEventListener("click", () => window.location.reload());
+          actions.appendChild(shareBtn);
+          actions.appendChild(replayBtn);
+          card.appendChild(actions);
+
+          const note = document.createElement("p");
+          note.className = "finale-note";
+          note.textContent = "udah, segini doang receh dari draft ini. makasih udah baca sampe sini 🙏🌸";
+          card.appendChild(note);
+
+          chatStatus.textContent = "✓✓ terkirim (akhirnya) 😂";
+          chatStatus.classList.add("sent");
+          spawnCelebration();
         }
 
-        // ==================== INIT ====================
-        window.addEventListener("load", () => {
-          document.getElementById("splash").classList.add("active");
-        });
+        // ==================== SCRIPT ====================
+        const chatScript = [
+          { type: "text", text: "psst, Najwaa 🌸" },
+          { type: "text", text: "ada pesan random yang nyasar ke draft kamu nih" },
+          { type: "sticker", text: "👀" },
+          { type: "text", text: "bukan tugas, bukan prank, bukan link aneh-aneh kok, aman 😂" },
+          { type: "text", text: "ceritanya gini... kadang suka kepikiran buat chat random gitu aja" },
+          {
+            type: "text",
+            text: "tapi pas udah mau ngetik, eh bingung sendiri mulai dari mana, terus akhirnya gajadi deh 😅",
+          },
+          {
+            type: "text",
+            text: 'jadi daripada chat beneran, aku bikin... ginian aja. anggep aja versi "berani"-nya 🙃',
+          },
+          { type: "text", text: "udah, gausah dibales kok, baca doang juga udah seneng banget hehe" },
+          { type: "text", text: "btw sebelum lanjut, ada kuis receh dulu nih, boleh kan? 👇" },
+          {
+            type: "quiz",
+            question: "Kalo lagi mager parah, biasanya Najwaa ngapain?",
+            options: [
+              { label: "📱 Scroll medsos sampe lupa waktu", reaction: "real banget, scroll 10 menit jadi 1 jam 🤡" },
+              { label: "🎧 Rebahan + dengerin musik", reaction: "mood paling sah sedunia, approved 👌" },
+              { label: "🍿 Mikirin mau ngemil apa", reaction: "ngemil emang obat segala masalah sih, betul 🍟" },
+              { label: "💤 Tidur aja, beres", reaction: "paling efisien, no debat, lanjut 😴" },
+            ],
+          },
+          { type: "text", text: "oke, dicatat di notes penting 📝" },
+          { type: "text", text: "lanjut ronde kedua~" },
+          {
+            type: "quiz",
+            question: 'Kalo disuruh pilih, mana yang paling "kena"?',
+            options: [
+              { label: "Chat dibales lama tapi panjang & niat", reaction: "selera tinggi nih, setuju banget 🙌" },
+              {
+                label: "Chat dibales cepet tapi isinya 'oh','ya','wkwk'",
+                reaction: "iconic sih ini, kita semua pasti pernah 😭",
+              },
+              { label: "Chat di-react emoji doang, ga dibales", reaction: "paling toxic tapi paling sering kejadian, wkwk" },
+              { label: "Voice note 3 menit isinya curhat semua 🎙️", reaction: "siap dengerin kapanpun, gas aja 🎧" },
+            ],
+          },
+          { type: "text", text: "makin yakin deh, Najwaa emang orangnya seru 😄" },
+          { type: "text", text: "oke ini part favorit aku, siap-siap..." },
+          { type: "slot" },
+          { type: "text", text: "tuh kan, mesinnya jujur banget, gabisa boong 😌" },
+          { type: "text", text: "abis ini ada game bentar, lumayan buat ngademin mata dari tugas 😆" },
+          { type: "game" },
+          { type: "text", text: "oke, part terakhir nih. agak panjang tapi worth it (semoga) 😄" },
+          { type: "letter" },
+          { type: "finale" },
+        ];
 
-        // Expose functions to global scope for inline onclick handlers
-        window.goToScene = goToScene;
-        window.handleAnswer = handleAnswer;
-        window.nextReason = nextReason;
-        window.startGame = startGame;
-        window.handleShare = handleShare;
-        window.replayAll = replayAll;
-        window.closeEggModal = closeEggModal;
-        window.toggleMusic = toggleMusic;
+        let finalGameScore = 0;
+
+        async function runScript() {
+          for (const item of chatScript) {
+            if (item.type === "text") {
+              await sendText(item.text, false);
+            } else if (item.type === "sticker") {
+              await sendText(item.text, true);
+            } else if (item.type === "quiz") {
+              const card = await sendCard((c) => {}, item.question);
+              await renderQuiz(card, item);
+              await wait(300);
+            } else if (item.type === "slot") {
+              const card = await sendCard((c) => {}, "mesin julukan");
+              await renderSlot(card);
+              await wait(300);
+            } else if (item.type === "game") {
+              const card = await sendCard((c) => {}, "mini game");
+              finalGameScore = await renderGame(card);
+              await wait(300);
+            } else if (item.type === "letter") {
+              const card = await sendCard((c) => {}, "pesan panjang");
+              await renderLetter(card);
+              await wait(300);
+            } else if (item.type === "finale") {
+              const card = await sendCard((c) => {}, "paket stiker");
+              renderFinale(card, finalGameScore);
+              scrollDown();
+            }
+            scrollDown();
+          }
+        }
       })();
     </script>
   </body>
