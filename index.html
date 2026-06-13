@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
-    <title>untuk Najwaa 🌸 (draft yang akhirnya kekirim)</title>
+    <title>untuk Najwaa 🌸 (versi ultra receh)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,17 +20,18 @@
 
     <style>
       :root {
-        --cream: #fff3e2;
-        --cream2: #ffe3c4;
+        --cream: #fff8ed;
+        --cream2: #ffe8d6;
         --paper: #ffffff;
-        --ink: #22223b;
-        --ink-soft: #8d8aa6;
-        --coral: #ff6f5e;
-        --coral-deep: #e14a33;
-        --yellow: #ffcd3c;
-        --teal: #33c2a6;
-        --blue: #5aaeff;
-        --pink: #ff8fc8;
+        --ink: #2d2a3a;
+        --ink-soft: #9e96b4;
+        --coral: #ff6b6b;
+        --coral-deep: #e05555;
+        --yellow: #ffd93d;
+        --teal: #6bc5b4;
+        --blue: #6ea8fe;
+        --pink: #ff9cc9;
+        --purple: #c4a6ff;
         --shadow: 6px 6px 0 var(--ink);
         --shadow-sm: 3px 3px 0 var(--ink);
         --radius-card: 20px 20px 20px 6px;
@@ -57,7 +58,7 @@
       body {
         font-family: var(--font-body);
         color: var(--ink);
-        background: var(--cream);
+        background: linear-gradient(135deg, #fff3e2 0%, #ffe3d0 50%, #ffecd6 100%);
         min-height: 100dvh;
         display: flex;
         align-items: center;
@@ -78,43 +79,82 @@
       .bg-blob {
         position: absolute;
         border-radius: 50%;
-        filter: blur(60px);
-        opacity: 0.55;
+        filter: blur(80px);
+        opacity: 0.5;
       }
       .bg-blob.b1 {
-        width: 320px;
-        height: 320px;
+        width: 350px;
+        height: 350px;
         background: var(--pink);
-        top: -100px;
-        left: -100px;
+        top: -120px;
+        left: -120px;
+        animation: blobMove1 8s ease-in-out infinite;
       }
       .bg-blob.b2 {
-        width: 360px;
-        height: 360px;
+        width: 400px;
+        height: 400px;
         background: var(--teal);
-        bottom: -140px;
-        right: -120px;
+        bottom: -160px;
+        right: -140px;
+        animation: blobMove2 10s ease-in-out infinite;
       }
       .bg-blob.b3 {
-        width: 260px;
-        height: 260px;
+        width: 300px;
+        height: 300px;
         background: var(--yellow);
         bottom: 10%;
-        left: -100px;
+        left: -80px;
+        animation: blobMove3 7s ease-in-out infinite;
+      }
+      .bg-blob.b4 {
+        width: 280px;
+        height: 280px;
+        background: var(--purple);
+        top: 40%;
+        right: -60px;
+        animation: blobMove1 9s ease-in-out infinite reverse;
+      }
+      @keyframes blobMove1 {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(40px, -30px) scale(1.1);
+        }
+      }
+      @keyframes blobMove2 {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(-50px, 40px) scale(1.15);
+        }
+      }
+      @keyframes blobMove3 {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(30px, 50px) scale(1.05);
+        }
       }
       .bg-sticker {
         position: absolute;
-        font-size: 2.4rem;
-        opacity: 0.35;
-        animation: floaty 6s ease-in-out infinite;
+        font-size: 2.8rem;
+        opacity: 0.3;
+        animation: floaty 5s ease-in-out infinite;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
       }
       @keyframes floaty {
         0%,
         100% {
-          transform: translateY(0) rotate(-6deg);
+          transform: translateY(0) rotate(-8deg);
         }
         50% {
-          transform: translateY(-26px) rotate(8deg);
+          transform: translateY(-30px) rotate(10deg);
         }
       }
       @media (max-width: 480px) {
@@ -130,12 +170,16 @@
         background: var(--paper);
         border: 4px solid var(--ink);
         border-radius: 38px;
-        box-shadow: 10px 10px 0 var(--ink);
+        box-shadow: 12px 12px 0 var(--ink), 0 20px 40px rgba(0, 0, 0, 0.15);
         position: relative;
         z-index: 10;
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        transition: box-shadow 0.3s;
+      }
+      .phone-frame:hover {
+        box-shadow: 14px 14px 0 var(--ink), 0 25px 50px rgba(0, 0, 0, 0.2);
       }
       @media (max-width: 480px) {
         .phone-frame {
@@ -150,23 +194,23 @@
       /* ==================== STATUS BAR ==================== */
       .status-bar {
         flex-shrink: 0;
-        height: 30px;
+        height: 32px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 22px;
         font-family: var(--font-display);
         font-weight: 600;
-        font-size: 0.72rem;
+        font-size: 0.7rem;
         background: var(--cream2);
         border-bottom: 3px solid var(--ink);
-        letter-spacing: 0.02em;
+        letter-spacing: 0.03em;
       }
       .status-bar .icons {
         display: flex;
         gap: 6px;
         align-items: center;
-        font-size: 0.78rem;
+        font-size: 0.75rem;
       }
 
       /* ==================== CHAT HEADER ==================== */
@@ -174,37 +218,70 @@
         flex-shrink: 0;
         display: flex;
         align-items: center;
-        gap: 12px;
-        padding: 12px 16px;
+        gap: 14px;
+        padding: 14px 18px;
         border-bottom: 3px solid var(--ink);
-        background: var(--paper);
+        background: linear-gradient(135deg, #fff, var(--cream2));
       }
       .chat-avatar {
-        width: 42px;
-        height: 42px;
+        width: 46px;
+        height: 46px;
         border-radius: 50%;
-        background: var(--yellow);
-        border: 2.5px solid var(--ink);
+        background: linear-gradient(135deg, var(--yellow), var(--coral));
+        border: 3px solid var(--ink);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         flex-shrink: 0;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.08);
+        }
       }
       .chat-name {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         line-height: 1.2;
       }
       .chat-status {
-        font-size: 0.72rem;
+        font-size: 0.7rem;
         color: var(--ink-soft);
         font-weight: 600;
-        transition: color 0.3s;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 4px;
       }
       .chat-status.sent {
         color: var(--teal);
+      }
+      .chat-status .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #ccc;
+        display: inline-block;
+      }
+      .chat-status.sent .dot {
+        background: var(--teal);
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
       }
 
       /* ==================== CHAT BODY ==================== */
@@ -212,112 +289,143 @@
         flex: 1;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 16px;
+        padding: 18px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
         background-image: radial-gradient(
           circle,
-          rgba(34, 34, 59, 0.05) 1px,
+          rgba(45, 42, 58, 0.04) 1px,
           transparent 1px
         );
-        background-size: 18px 18px;
+        background-size: 20px 20px;
         scroll-behavior: smooth;
+      }
+      .chat-body::-webkit-scrollbar {
+        width: 4px;
+      }
+      .chat-body::-webkit-scrollbar-thumb {
+        background: var(--ink-soft);
+        border-radius: 10px;
       }
 
       .msg {
-        max-width: 80%;
-        padding: 10px 14px;
-        border-radius: 16px;
-        font-size: 0.92rem;
-        line-height: 1.5;
+        max-width: 82%;
+        padding: 12px 16px;
+        border-radius: 18px;
+        font-size: 0.9rem;
+        line-height: 1.55;
         align-self: flex-end;
-        background: linear-gradient(135deg, var(--coral), var(--coral-deep));
+        background: linear-gradient(135deg, var(--coral), #ff8585);
         color: #fff;
-        border-bottom-right-radius: 4px;
-        box-shadow: 0 2px 0 rgba(34, 34, 59, 0.15);
-        animation: popMsg 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        border-bottom-right-radius: 6px;
+        box-shadow: 0 3px 8px rgba(255, 107, 107, 0.25);
+        animation: popMsg 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         word-wrap: break-word;
+        transition: transform 0.2s;
+      }
+      .msg:hover {
+        transform: scale(1.02);
       }
       .msg.sticker-msg {
         background: transparent;
         box-shadow: none;
-        font-size: 2.3rem;
-        padding: 0 2px;
+        font-size: 2.6rem;
+        padding: 0 4px;
         line-height: 1;
+        animation: popSticker 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
       }
       @keyframes popMsg {
         from {
           opacity: 0;
-          transform: translateY(8px) scale(0.95);
+          transform: translateY(12px) scale(0.9);
         }
         to {
           opacity: 1;
           transform: translateY(0) scale(1);
         }
       }
+      @keyframes popSticker {
+        0% {
+          opacity: 0;
+          transform: scale(0) rotate(-20deg);
+        }
+        60% {
+          transform: scale(1.3) rotate(5deg);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+      }
 
       .typing-indicator {
         align-self: flex-end;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.8);
         border: 2.5px dashed var(--ink);
-        border-radius: 16px;
-        padding: 11px 16px;
+        border-radius: 18px;
+        padding: 12px 18px;
         display: flex;
-        gap: 5px;
+        gap: 6px;
         align-items: center;
         animation: popMsg 0.3s ease;
+        backdrop-filter: blur(4px);
       }
       .typing-dot {
-        width: 6px;
-        height: 6px;
+        width: 7px;
+        height: 7px;
         border-radius: 50%;
         background: var(--ink);
-        animation: typingBounce 1s infinite;
+        animation: typingBounce 1.2s infinite;
       }
       .typing-dot:nth-child(2) {
-        animation-delay: 0.15s;
+        animation-delay: 0.2s;
       }
       .typing-dot:nth-child(3) {
-        animation-delay: 0.3s;
+        animation-delay: 0.4s;
       }
       @keyframes typingBounce {
         0%,
         60%,
         100% {
           transform: translateY(0);
-          opacity: 0.4;
+          opacity: 0.35;
         }
         30% {
-          transform: translateY(-5px);
+          transform: translateY(-7px);
           opacity: 1;
         }
       }
 
-      /* ==================== APP CARDS (quiz / slot / game / letter / finale) ==================== */
+      /* ==================== APP CARDS ==================== */
       .app-card {
         align-self: stretch;
         background: var(--paper);
         border: 3px solid var(--ink);
         border-radius: var(--radius-card);
         box-shadow: var(--shadow);
-        padding: 16px;
-        animation: popMsg 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        padding: 18px;
+        animation: popMsg 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .app-card:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 10px 10px 0 var(--ink);
       }
       .app-card-title {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 1.02rem;
-        margin-bottom: 4px;
+        font-size: 1.05rem;
+        margin-bottom: 6px;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
       }
       .app-card-sub {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         color: var(--ink-soft);
-        margin-bottom: 12px;
-        line-height: 1.5;
+        margin-bottom: 14px;
+        line-height: 1.55;
       }
 
       /* Quiz */
@@ -325,84 +433,125 @@
         display: block;
         width: 100%;
         text-align: left;
-        padding: 10px 14px;
-        margin-bottom: 8px;
+        padding: 12px 16px;
+        margin-bottom: 10px;
         border: 2.5px solid var(--ink);
-        border-radius: 14px;
+        border-radius: 16px;
         background: var(--cream);
         font-family: inherit;
         font-weight: 600;
-        font-size: 0.85rem;
+        font-size: 0.84rem;
         cursor: pointer;
-        transition:
-          transform 0.15s,
-          box-shadow 0.15s,
-          background 0.15s,
-          opacity 0.15s;
+        transition: all 0.2s ease;
         color: var(--ink);
+        position: relative;
+        overflow: hidden;
+      }
+      .quiz-opt::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, var(--yellow), transparent);
+        opacity: 0;
+        transition: opacity 0.2s;
       }
       .quiz-opt:last-child {
         margin-bottom: 0;
       }
       .quiz-opt:hover:not(:disabled) {
-        transform: translate(-2px, -2px);
-        box-shadow: 3px 3px 0 var(--ink);
+        transform: translate(-3px, -3px);
+        box-shadow: 5px 5px 0 var(--ink);
+      }
+      .quiz-opt:active:not(:disabled) {
+        transform: translate(2px, 2px);
+        box-shadow: 0 0 0 var(--ink);
       }
       .quiz-opt.selected {
         background: var(--yellow);
-        transform: translate(-2px, -2px);
-        box-shadow: 3px 3px 0 var(--ink);
+        transform: translate(-3px, -3px);
+        box-shadow: 5px 5px 0 var(--ink);
+      }
+      .quiz-opt.selected::before {
+        opacity: 0.3;
       }
       .quiz-opt:disabled:not(.selected) {
-        opacity: 0.45;
-      }
-      .quiz-opt:disabled {
+        opacity: 0.4;
         cursor: default;
+        filter: grayscale(0.3);
       }
 
       /* Slot machine */
       .slot-row {
         display: flex;
-        gap: 8px;
-        margin: 10px 0 14px;
+        gap: 10px;
+        margin: 12px 0 16px;
       }
       .slot-reel {
         flex: 1;
-        min-height: 58px;
-        background: var(--ink);
+        min-height: 64px;
+        background: linear-gradient(180deg, var(--ink), #3d3754);
         color: var(--yellow);
-        border-radius: 12px;
+        border-radius: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 0.74rem;
+        font-size: 0.72rem;
         text-align: center;
-        padding: 6px;
+        padding: 8px;
         line-height: 1.2;
-        border: 2.5px solid var(--ink);
+        border: 3px solid var(--ink);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.1s;
+      }
+      .slot-reel.spinning {
+        animation: reelShake 0.05s infinite;
+      }
+      @keyframes reelShake {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-3px);
+        }
       }
       .slot-result {
-        margin-top: 4px;
-        padding: 12px;
-        background: var(--cream2);
-        border: 2.5px dashed var(--coral-deep);
-        border-radius: 14px;
+        margin-top: 6px;
+        padding: 14px;
+        background: linear-gradient(135deg, var(--cream2), #fff);
+        border: 3px dashed var(--coral-deep);
+        border-radius: 16px;
         font-family: var(--font-hand);
-        font-size: 1.25rem;
+        font-size: 1.3rem;
         text-align: center;
         font-weight: 700;
         color: var(--coral-deep);
-        min-height: 28px;
+        min-height: 32px;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s;
+      }
+      .slot-result.jackpot {
+        animation: jackpotGlow 0.5s ease-in-out 3;
+        background: linear-gradient(135deg, #fff3cd, #ffe69c);
+        color: #ff6b00;
+      }
+      @keyframes jackpotGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 5px rgba(255, 107, 0, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 30px rgba(255, 107, 0, 0.7);
+        }
       }
       .slot-actions {
         display: flex;
-        gap: 8px;
-        margin-top: 12px;
+        gap: 10px;
+        margin-top: 14px;
       }
       .slot-actions .btn-fun {
         flex: 1;
@@ -412,27 +561,44 @@
       .btn-fun {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 0.88rem;
-        padding: 11px 18px;
-        border-radius: 14px;
+        font-size: 0.85rem;
+        padding: 12px 20px;
+        border-radius: 16px;
         border: 3px solid var(--ink);
         background: var(--yellow);
         box-shadow: var(--shadow-sm);
         cursor: pointer;
-        transition: transform 0.12s, box-shadow 0.12s;
+        transition: all 0.15s ease;
         color: var(--ink);
         text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-fun::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.4));
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .btn-fun:hover::after {
+        opacity: 1;
       }
       .btn-fun:active {
-        transform: translate(3px, 3px);
+        transform: translate(4px, 4px);
         box-shadow: 0 0 0 var(--ink);
       }
       .btn-fun.coral {
-        background: var(--coral);
+        background: linear-gradient(135deg, var(--coral), var(--coral-deep));
         color: #fff;
       }
       .btn-fun.teal {
-        background: var(--teal);
+        background: linear-gradient(135deg, var(--teal), #5aad9c);
+        color: #fff;
+      }
+      .btn-fun.purple {
+        background: linear-gradient(135deg, var(--purple), #b088f0);
         color: #fff;
       }
       .btn-fun.full {
@@ -443,7 +609,12 @@
         display: none;
       }
       .btn-fun + .btn-fun {
-        margin-top: 10px;
+        margin-top: 12px;
+      }
+      .btn-fun:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        filter: grayscale(0.2);
       }
 
       /* Game */
@@ -451,10 +622,10 @@
         position: absolute;
         inset: 0;
         z-index: 80;
-        background: linear-gradient(165deg, var(--blue), var(--teal));
+        background: linear-gradient(165deg, #4a90d9, var(--teal), #3d7ab5);
         display: none;
         flex-direction: column;
-        padding: 18px;
+        padding: 20px;
         color: #fff;
       }
       .game-overlay.active {
@@ -466,39 +637,45 @@
         align-items: center;
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 0.95rem;
-        margin-bottom: 12px;
+        font-size: 1rem;
+        margin-bottom: 14px;
       }
       .game-area {
         flex: 1;
         position: relative;
         overflow: hidden;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.14);
-        border: 3px solid rgba(255, 255, 255, 0.45);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
       }
       .game-sticker {
         position: absolute;
-        top: -44px;
-        font-size: 2.1rem;
+        top: -50px;
+        font-size: 2.4rem;
         cursor: pointer;
         user-select: none;
         animation: fallDown linear forwards;
-        filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.15));
+        filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.2));
+        transition: transform 0.1s;
+      }
+      .game-sticker:active {
+        transform: scale(1.3);
       }
       @keyframes fallDown {
         to {
-          top: 102%;
+          top: 105%;
         }
       }
       .score-pop {
         position: absolute;
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #fff;
         pointer-events: none;
-        animation: popUp 0.6s ease forwards;
+        animation: popUp 0.7s ease forwards;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       }
       @keyframes popUp {
         from {
@@ -507,7 +684,7 @@
         }
         to {
           opacity: 0;
-          transform: translateY(-40px) scale(1.3);
+          transform: translateY(-50px) scale(1.5);
         }
       }
       .game-center-msg {
@@ -518,18 +695,19 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        gap: 14px;
-        padding: 24px;
+        gap: 16px;
+        padding: 28px;
       }
       .game-center-msg .big {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 2.6rem;
+        font-size: 3rem;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
       .game-center-msg p {
         font-size: 0.95rem;
         line-height: 1.6;
-        max-width: 280px;
+        max-width: 300px;
       }
       .game-result-panel {
         position: absolute;
@@ -539,10 +717,11 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        gap: 14px;
-        padding: 24px;
-        background: rgba(34, 34, 59, 0.35);
-        backdrop-filter: blur(2px);
+        gap: 16px;
+        padding: 28px;
+        background: rgba(34, 34, 59, 0.4);
+        backdrop-filter: blur(4px);
+        border-radius: 20px;
       }
       .game-result-panel.show {
         display: flex;
@@ -550,19 +729,31 @@
       .game-result-panel .score-num {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 3.5rem;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        animation: scoreReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      @keyframes scoreReveal {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
       .game-result-panel p {
-        font-size: 0.92rem;
+        font-size: 0.95rem;
         line-height: 1.6;
-        max-width: 280px;
+        max-width: 300px;
       }
 
       /* Letter */
       .letter-text p {
-        font-size: 0.88rem;
-        line-height: 1.7;
-        margin-bottom: 10px;
+        font-size: 0.86rem;
+        line-height: 1.75;
+        margin-bottom: 12px;
         color: var(--ink);
       }
       .letter-text p:last-child {
@@ -570,68 +761,113 @@
       }
       .letter-text .sign {
         font-family: var(--font-hand);
-        font-size: 1.15rem;
+        font-size: 1.2rem;
         color: var(--coral-deep);
         font-weight: 700;
         text-align: right;
         display: block;
-        margin-top: 12px;
+        margin-top: 16px;
+        animation: fadeInUp 0.8s ease;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       /* Finale */
       .sticker-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 8px;
-        margin: 12px 0 14px;
+        gap: 10px;
+        margin: 14px 0 18px;
       }
       .sticker-cell {
         aspect-ratio: 1;
-        background: var(--cream);
+        background: linear-gradient(135deg, var(--cream), #fff);
         border: 2.5px solid var(--ink);
-        border-radius: 12px;
+        border-radius: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         text-align: center;
-        padding: 4px;
+        padding: 6px;
+        transition: all 0.2s;
+        cursor: default;
+      }
+      .sticker-cell:hover {
+        transform: scale(1.08) rotate(-3deg);
+        box-shadow: 3px 3px 0 var(--ink);
       }
       .sticker-cell.small-text {
-        font-size: 0.62rem;
+        font-size: 0.6rem;
         font-weight: 700;
         font-family: var(--font-display);
         line-height: 1.2;
       }
       .finale-actions {
         display: flex;
-        gap: 8px;
+        gap: 10px;
       }
       .finale-actions .btn-fun {
         flex: 1;
       }
       .finale-note {
-        margin-top: 12px;
+        margin-top: 16px;
         font-family: var(--font-hand);
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         text-align: center;
         color: var(--ink-soft);
-        line-height: 1.5;
+        line-height: 1.6;
+        animation: fadeInUp 1s ease;
       }
 
-      /* Confetti pieces (finale celebration) */
+      /* Confetti pieces */
       .confetti-piece {
         position: absolute;
-        top: -30px;
-        font-size: 1.5rem;
+        top: -40px;
+        font-size: 1.8rem;
         pointer-events: none;
         z-index: 95;
-        animation: confettiFall 2.6s ease-in forwards;
+        animation: confettiFall 3s ease-in forwards;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
       }
       @keyframes confettiFall {
-        to {
-          transform: translateY(620px) rotate(360deg);
+        0% {
+          transform: translateY(0) rotate(0deg) scale(1);
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(650px) rotate(720deg) scale(0.3);
           opacity: 0;
+        }
+      }
+
+      /* Sparkle trail */
+      .sparkle {
+        position: absolute;
+        pointer-events: none;
+        z-index: 90;
+        font-size: 1rem;
+        animation: sparkleUp 1s ease-out forwards;
+      }
+      @keyframes sparkleUp {
+        from {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-60px) scale(0);
         }
       }
 
@@ -640,90 +876,103 @@
         position: absolute;
         inset: 0;
         z-index: 50;
-        background: linear-gradient(165deg, var(--coral) 0%, var(--pink) 55%, var(--yellow) 100%);
+        background: linear-gradient(
+          170deg,
+          var(--coral) 0%,
+          #ff8585 30%,
+          var(--pink) 60%,
+          var(--yellow) 100%
+        );
         color: #fff;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 54px 22px calc(28px + var(--safe-bottom));
+        padding: 60px 24px calc(32px + var(--safe-bottom));
         text-align: center;
-        transition:
-          transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-          opacity 0.55s ease;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.6s ease;
         cursor: pointer;
       }
       .lockscreen.unlocked {
-        transform: translateY(-100%);
+        transform: translateY(-105%);
         opacity: 0;
         pointer-events: none;
       }
       .lock-time {
         font-family: var(--font-display);
-        font-size: clamp(2.6rem, 13vw, 3.4rem);
+        font-size: clamp(2.8rem, 14vw, 3.6rem);
         font-weight: 700;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.03em;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       }
       .lock-date {
-        font-size: 0.88rem;
-        opacity: 0.92;
-        margin-top: 6px;
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin-top: 8px;
         font-weight: 600;
       }
       .lock-mid {
         font-family: var(--font-hand);
-        font-size: 1.3rem;
-        line-height: 1.5;
-        max-width: 280px;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        max-width: 300px;
+        animation: fadeInUp 1s ease 0.2s both;
       }
       .lock-notif {
         width: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        border: 2px solid rgba(255, 255, 255, 0.55);
-        border-radius: 16px;
-        padding: 14px 16px;
-        backdrop-filter: blur(6px);
+        background: rgba(255, 255, 255, 0.22);
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        border-radius: 20px;
+        padding: 16px 18px;
+        backdrop-filter: blur(8px);
         display: flex;
-        gap: 10px;
+        gap: 12px;
         align-items: flex-start;
         text-align: left;
+        animation: fadeInUp 1s ease 0.4s both;
+        transition: transform 0.2s;
+      }
+      .lock-notif:hover {
+        transform: scale(1.02);
       }
       .lock-notif .icon {
-        width: 34px;
-        height: 34px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
         background: var(--ink);
         flex-shrink: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       .lock-notif .body {
         flex: 1;
       }
       .lock-notif .title {
         font-weight: 700;
-        font-size: 0.85rem;
-        margin-bottom: 2px;
+        font-size: 0.88rem;
+        margin-bottom: 4px;
         display: flex;
         justify-content: space-between;
-        gap: 6px;
+        gap: 8px;
       }
       .lock-notif .preview {
         font-size: 0.8rem;
-        opacity: 0.95;
-        line-height: 1.4;
+        opacity: 0.9;
+        line-height: 1.5;
       }
       .lock-hint {
         font-family: var(--font-hand);
-        font-size: 1.1rem;
-        margin-top: 16px;
-        animation: bounceHint 1.6s infinite;
+        font-size: 1.2rem;
+        margin-top: 20px;
+        animation: bounceHint 1.8s infinite;
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         justify-content: center;
+        opacity: 0.8;
       }
       @keyframes bounceHint {
         0%,
@@ -731,7 +980,7 @@
           transform: translateY(0);
         }
         50% {
-          transform: translateY(-6px);
+          transform: translateY(-8px);
         }
       }
 
@@ -740,8 +989,8 @@
         flex-shrink: 0;
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 10px 14px calc(10px + var(--safe-bottom));
+        gap: 10px;
+        padding: 12px 16px calc(12px + var(--safe-bottom));
         border-top: 3px solid var(--ink);
         background: var(--cream2);
       }
@@ -749,60 +998,86 @@
         flex: 1;
         background: var(--paper);
         border: 2.5px solid var(--ink);
-        border-radius: 22px;
-        padding: 9px 16px;
-        font-size: 0.84rem;
+        border-radius: 24px;
+        padding: 10px 18px;
+        font-size: 0.82rem;
         color: var(--ink-soft);
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        transition: opacity 0.35s;
+        transition: opacity 0.4s, transform 0.2s;
       }
       .fake-input.fade {
         opacity: 0;
+        transform: scaleX(0.95);
       }
       .send-btn {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
-        background: var(--coral);
-        border: 2.5px solid var(--ink);
+        background: linear-gradient(135deg, var(--coral), var(--coral-deep));
+        border: 3px solid var(--ink);
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         flex-shrink: 0;
-        font-size: 0.95rem;
-        transition: transform 0.12s;
+        font-size: 1rem;
+        transition: all 0.15s;
+        box-shadow: var(--shadow-sm);
       }
       .send-btn:active {
-        transform: scale(0.9);
+        transform: scale(0.85) rotate(-10deg);
+        box-shadow: 0 0 0 var(--ink);
       }
 
       /* ==================== TOAST ==================== */
       .toast {
         position: absolute;
-        bottom: 78px;
+        bottom: 85px;
         left: 50%;
         transform: translateX(-50%) translateY(20px);
         opacity: 0;
         background: var(--ink);
         color: #fff;
-        padding: 9px 18px;
-        border-radius: 22px;
+        padding: 10px 20px;
+        border-radius: 24px;
         font-size: 0.78rem;
         font-weight: 600;
-        transition: all 0.3s ease;
+        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
         pointer-events: none;
         z-index: 200;
         white-space: nowrap;
         max-width: 90%;
         text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
       .toast.show {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
+      }
+
+      /* ==================== EASTER EGG ==================== */
+      .easter-egg {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        background: linear-gradient(135deg, #fff, var(--yellow));
+        border: 3px solid var(--ink);
+        border-radius: 20px;
+        padding: 12px 20px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 0.85rem;
+        z-index: 150;
+        pointer-events: none;
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow: var(--shadow-sm);
+      }
+      .easter-egg.show {
+        transform: translateX(-50%) scale(1);
       }
     </style>
   </head>
@@ -813,12 +1088,15 @@
       <div class="bg-blob b1"></div>
       <div class="bg-blob b2"></div>
       <div class="bg-blob b3"></div>
-      <span class="bg-sticker" style="top: 8%; left: 10%; animation-delay: 0s">✨</span>
-      <span class="bg-sticker" style="top: 20%; right: 8%; animation-delay: 1.2s">🌸</span>
-      <span class="bg-sticker" style="bottom: 14%; left: 6%; animation-delay: 2s">🎀</span>
-      <span class="bg-sticker" style="bottom: 24%; right: 12%; animation-delay: 0.6s">⭐</span>
-      <span class="bg-sticker" style="top: 50%; left: 3%; animation-delay: 1.8s">💌</span>
-      <span class="bg-sticker" style="top: 45%; right: 4%; animation-delay: 2.6s">🎈</span>
+      <div class="bg-blob b4"></div>
+      <span class="bg-sticker" style="top: 6%; left: 8%; animation-delay: 0s">✨</span>
+      <span class="bg-sticker" style="top: 18%; right: 6%; animation-delay: 1.4s">🌸</span>
+      <span class="bg-sticker" style="bottom: 12%; left: 4%; animation-delay: 2.2s">🎀</span>
+      <span class="bg-sticker" style="bottom: 22%; right: 10%; animation-delay: 0.8s">⭐</span>
+      <span class="bg-sticker" style="top: 48%; left: 2%; animation-delay: 2s">💌</span>
+      <span class="bg-sticker" style="top: 42%; right: 3%; animation-delay: 2.8s">🎈</span>
+      <span class="bg-sticker" style="top: 65%; left: 85%; animation-delay: 1s">💫</span>
+      <span class="bg-sticker" style="top: 75%; left: 12%; animation-delay: 1.6s">🍀</span>
     </div>
 
     <div class="phone-frame" id="phoneFrame">
@@ -836,17 +1114,19 @@
       <div class="lockscreen" id="lockscreen">
         <div>
           <div class="lock-time" id="lockTime">00:00</div>
-          <div class="lock-date" id="lockDate">Memuat tanggal...</div>
+          <div class="lock-date" id="lockDate">Memuat...</div>
         </div>
-        <p class="lock-mid">satu pesan random nyasar ke sini... 👀</p>
+        <p class="lock-mid">👀 ada draft nyasar...<br />kayaknya spesial deh</p>
         <div class="lock-notif">
-          <div class="icon">🌸</div>
+          <div class="icon">💌</div>
           <div class="body">
-            <div class="title"><span>Draft ke Najwaa</span><span>sekarang</span></div>
-            <div class="preview">"psst, ada sesuatu nih... buka deh, dijamin gak nyesel (semoga) 😂"</div>
+            <div class="title"><span>📬 Draft ke Najwaa</span><span>baru saja</span></div>
+            <div class="preview">
+              "psst... ada sesuatu nih. buka aja, dijamin gak nyesel (semoga) 😂✨"
+            </div>
           </div>
         </div>
-        <p class="lock-hint"><i class="fa-solid fa-chevron-up"></i> ketuk / geser buat buka</p>
+        <p class="lock-hint"><i class="fa-solid fa-chevron-up"></i> tap / geser ke atas</p>
       </div>
 
       <!-- Chat header -->
@@ -854,7 +1134,9 @@
         <div class="chat-avatar">🌸</div>
         <div>
           <div class="chat-name">Najwaa</div>
-          <div class="chat-status" id="chatStatus">draft • belum terkirim</div>
+          <div class="chat-status" id="chatStatus">
+            <span class="dot"></span> draft • belum terkirim
+          </div>
         </div>
       </div>
 
@@ -870,7 +1152,7 @@
         <div class="game-area" id="gameArea">
           <div class="game-center-msg" id="gameCenterMsg">
             <div class="big" id="gameCountdown">3</div>
-            <p>siap-siap, stiker bakal jatuh dari atas. tap secepetnya ya!</p>
+            <p>siap-siap! stiker bakal jatuh, tap secepetnya ya! 🎯</p>
           </div>
           <div class="game-result-panel" id="gameResultPanel">
             <div class="score-num" id="gameScoreFinal">0</div>
@@ -888,6 +1170,8 @@
 
       <!-- Toast -->
       <div class="toast" id="toast"></div>
+      <!-- Easter egg -->
+      <div class="easter-egg" id="easterEgg"></div>
     </div>
 
     <script>
@@ -911,15 +1195,34 @@
         updateClock();
         setInterval(updateClock, 30000);
 
+        // ==================== EASTER EGG ====================
+        const easterEgg = document.getElementById("easterEgg");
+        let easterTimer = null;
+        function showEasterEgg(msg, duration = 2000) {
+          easterEgg.textContent = msg;
+          easterEgg.classList.add("show");
+          clearTimeout(easterTimer);
+          easterTimer = setTimeout(() => easterEgg.classList.remove("show"), duration);
+        }
+
         // ==================== LOCKSCREEN ====================
         const lockscreen = document.getElementById("lockscreen");
+        let unlockClickCount = 0;
         function unlock() {
           if (lockscreen.classList.contains("unlocked")) return;
+          unlockClickCount++;
+          if (unlockClickCount >= 5 && unlockClickCount < 7) {
+            showEasterEgg("🐣 eh sabar dong, bentar lagi kebuka kok~");
+            return;
+          }
+          if (unlockClickCount >= 7) {
+            showEasterEgg("😭 iya iya maap, langsung kebuka nih!");
+          }
           lockscreen.classList.add("unlocked");
           setTimeout(() => {
             lockscreen.style.display = "none";
             runScript();
-          }, 550);
+          }, 600);
         }
         lockscreen.addEventListener("click", unlock);
         lockscreen.addEventListener(
@@ -946,11 +1249,13 @@
           "lagi ngetik...",
           "eh btw...",
           "...",
-          "gajadi deh, gapapa",
-          "kirim stiker aja ya 😅",
+          "gajadi deh, gapapa 😅",
+          "kirim stiker aja ya",
           "besok deh lanjutnya",
           "...",
           "ah lupakan 😂",
+          "sebenernya...",
+          "udah ah, baca aja",
         ];
         let fpIdx = 0;
         const fakeInput = document.getElementById("fakeInput");
@@ -960,10 +1265,16 @@
             fpIdx = (fpIdx + 1) % fakePlaceholders.length;
             fakeInput.textContent = fakePlaceholders[fpIdx];
             fakeInput.classList.remove("fade");
-          }, 350);
-        }, 2600);
+          }, 400);
+        }, 2800);
         document.getElementById("sendBtn").addEventListener("click", () => {
-          showToast("tenang, pesan ini emang udah 'terkirim' kok 😉");
+          const jokes = [
+            "📨 udah 'terkirim' kok, tenang~",
+            "✉️ pesannya udah nyampe, cek aja!",
+            "📬 delivery status: imajinasi",
+            "💌 khusus Najwaa, bukan spam kok",
+          ];
+          showToast(jokes[Math.floor(Math.random() * jokes.length)]);
         });
 
         // ==================== CHAT ENGINE ====================
@@ -977,7 +1288,7 @@
           chatBody.scrollTop = chatBody.scrollHeight;
         }
         function typingDelay(text) {
-          return Math.min(1700, 450 + text.length * 16);
+          return Math.min(1800, 500 + text.length * 18);
         }
 
         async function showTyping(durationFactorText) {
@@ -998,7 +1309,20 @@
           msg.textContent = text;
           chatBody.appendChild(msg);
           scrollDown();
-          await wait(380);
+          // Add sparkle on hover for regular messages
+          if (!isSticker && text.length > 20) {
+            msg.addEventListener("mouseenter", () => {
+              const spark = document.createElement("span");
+              spark.className = "sparkle";
+              spark.textContent = "✨";
+              spark.style.left = Math.random() * 80 + "%";
+              spark.style.top = "-10px";
+              msg.style.position = "relative";
+              msg.appendChild(spark);
+              setTimeout(() => spark.remove(), 1000);
+            });
+          }
+          await wait(400);
         }
 
         async function sendCard(buildFn, typingHint) {
@@ -1021,17 +1345,27 @@
 
           return new Promise((resolve) => {
             const optsWrap = document.createElement("div");
-            optsWrap.style.marginTop = "10px";
-            item.options.forEach((opt) => {
+            optsWrap.style.marginTop = "12px";
+            item.options.forEach((opt, index) => {
               const btn = document.createElement("button");
               btn.className = "quiz-opt";
               btn.textContent = opt.label;
+              btn.style.animationDelay = index * 0.05 + "s";
               btn.addEventListener("click", async () => {
                 const all = optsWrap.querySelectorAll(".quiz-opt");
                 all.forEach((b) => (b.disabled = true));
                 btn.classList.add("selected");
+                // Add sparkle effect on selection
+                const spark = document.createElement("span");
+                spark.className = "sparkle";
+                spark.textContent = "💫";
+                spark.style.left = "50%";
+                spark.style.top = "0";
+                btn.style.position = "relative";
+                btn.appendChild(spark);
+                setTimeout(() => spark.remove(), 800);
                 scrollDown();
-                await wait(350);
+                await wait(400);
                 await sendText(opt.reaction, false);
                 resolve();
               });
@@ -1044,7 +1378,7 @@
 
         // ==================== SLOT MACHINE ====================
         const slotReels = [
-          ["Si Paling", "Ratu", "Juara Nasional", "Legenda", "MVP", "Bintang Utama", "Sultan"],
+          ["Si Paling", "Ratu", "Juara Nasional", "Legenda", "MVP", "Bintang Utama", "Sultan", "GOAT"],
           [
             "Baik Tanpa Diminta",
             "Rajin Tapi Mager",
@@ -1055,8 +1389,9 @@
             "Baper Tapi Gemes",
             "Random Tapi Asik",
             "Pejuang Deadline",
+            "Cool Tanpa Effort",
           ],
-          ["🌸", "✨", "🏆", "😄", "💯", "🔥", "🎉", "🌟", "💖"],
+          ["🌸", "✨", "🏆", "😄", "💯", "🔥", "🎉", "🌟", "💖", "👑"],
         ];
         let lastSlotResult = "";
 
@@ -1069,8 +1404,7 @@
 
           const sub = document.createElement("div");
           sub.className = "app-card-sub";
-          sub.textContent =
-            "tekan tombolnya, biar mesin nentuin julukan resmi buat Najwaa hari ini.";
+          sub.textContent = "tekan tombolnya, biar mesin nentuin julukan paling pas buat Najwaa hari ini ✨";
           card.appendChild(sub);
 
           const row = document.createElement("div");
@@ -1086,7 +1420,7 @@
 
           const result = document.createElement("div");
           result.className = "slot-result";
-          result.textContent = "ketuk \"Putar!\" untuk mulai ✨";
+          result.textContent = 'ketuk "Putar!" untuk mulai 🎰';
           card.appendChild(result);
 
           const actions = document.createElement("div");
@@ -1095,7 +1429,7 @@
           spinBtn.className = "btn-fun coral";
           spinBtn.textContent = "Putar! 🎰";
           const nextBtn = document.createElement("button");
-          nextBtn.className = "btn-fun";
+          nextBtn.className = "btn-fun purple";
           nextBtn.textContent = "Lanjut →";
           nextBtn.hidden = true;
           actions.appendChild(spinBtn);
@@ -1105,27 +1439,42 @@
           return new Promise((resolve) => {
             spinBtn.addEventListener("click", () => {
               spinBtn.disabled = true;
-              spinBtn.style.opacity = "0.6";
+              spinBtn.style.opacity = "0.7";
+              reelEls.forEach((reel) => reel.classList.add("spinning"));
+              result.classList.remove("jackpot");
+
               reelEls.forEach((reel, i) => {
                 let ticks = 0;
-                const maxTicks = 12 + i * 6;
+                const maxTicks = 14 + i * 6;
                 const interval = setInterval(() => {
                   const list = slotReels[i];
                   reel.textContent = list[Math.floor(Math.random() * list.length)];
                   ticks++;
                   if (ticks >= maxTicks) {
                     clearInterval(interval);
+                    reel.classList.remove("spinning");
                     if (i === reelEls.length - 1) {
                       lastSlotResult = reelEls.map((r) => r.textContent).join(" ");
-                      result.textContent = "Hasil resmi: " + lastSlotResult;
+                      result.textContent = "🎯 " + lastSlotResult + " 🎯";
+                      // Check for "jackpot" (same first letters or something fun)
+                      const words = lastSlotResult.split(" ");
+                      if (
+                        words.length >= 2 &&
+                        words[0][0] === words[1]?.[0] &&
+                        Math.random() < 0.3
+                      ) {
+                        result.classList.add("jackpot");
+                        result.textContent = "🎰 JACKPOT! " + lastSlotResult + " 🎉";
+                        showEasterEgg("🎉 JACKPOT! Julukan langka nih!");
+                      }
                       spinBtn.disabled = false;
                       spinBtn.style.opacity = "1";
-                      spinBtn.textContent = "Putar lagi! 🎰";
+                      spinBtn.textContent = "Putar lagi! 🔄";
                       nextBtn.hidden = false;
                       scrollDown();
                     }
                   }
-                }, 60);
+                }, 50);
               });
             });
             nextBtn.addEventListener("click", () => resolve());
@@ -1133,14 +1482,19 @@
         }
 
         // ==================== MINI GAME ====================
-        const gameStickers = ["🌸", "✨", "💖", "🎀", "⭐", "💌", "🍓", "🎈", "🎉", "💫"];
+        const gameStickers = ["🌸", "✨", "💖", "🎀", "⭐", "💌", "🍓", "🎈", "🎉", "💫", "🍀", "🌈"];
         let gameScore = 0;
 
         function getGameComment(score) {
-          if (score === 0) return "wkwk santuy banget, 0 itu juga pencapaian sih 😂";
-          if (score <= 4) return "lumayan! refleksnya standar manusia normal kok 👍";
-          if (score <= 9) return "wih jago, jangan-jangan emang jago main hp ya 😏";
-          return "GILA INI MAH PRO PLAYER, hormat dulu 🫡";
+          if (score === 0)
+            return "wkwk santuy banget, 0 itu juga pencapaian sih, minimal udah nyoba 😂👏";
+          if (score <= 4)
+            return "lumayan! refleksnya standar manusia normal kok, gausah berkecil hati 👍";
+          if (score <= 9)
+            return "wih jago, jangan-jangan emang pro player ML juga ya 😏🔥";
+          if (score <= 15)
+            return "BUSET, REFLEKS DEWA! hormat dulu 🫡✨";
+          return "GILA INI MAH PRO PLAYER SEJATI, MAIN ESPORTS YUK! 🏆🔥";
         }
 
         function playGame() {
@@ -1163,18 +1517,26 @@
 
             let count = 3;
             countdownEl.textContent = count;
+            countdownEl.style.animation = "none";
+            void countdownEl.offsetWidth;
+            countdownEl.style.animation = "scoreReveal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)";
+
             const countdownInterval = setInterval(() => {
               count--;
               if (count > 0) {
                 countdownEl.textContent = count;
+                countdownEl.style.animation = "none";
+                void countdownEl.offsetWidth;
+                countdownEl.style.animation = "scoreReveal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)";
               } else if (count === 0) {
                 countdownEl.textContent = "GO!";
+                countdownEl.style.color = "#ffd93d";
               } else {
                 clearInterval(countdownInterval);
                 centerMsg.style.display = "none";
                 startFalling();
               }
-            }, 600);
+            }, 700);
 
             let spawnInterval, timeInterval;
             function startFalling() {
@@ -1183,46 +1545,67 @@
               timeInterval = setInterval(() => {
                 timeLeft--;
                 timerLabel.textContent = Math.max(timeLeft, 0) + "s";
+                if (timeLeft <= 3 && timeLeft > 0) {
+                  timerLabel.style.color = "#ff6b6b";
+                }
                 if (timeLeft <= 0) {
                   clearInterval(timeInterval);
                   clearInterval(spawnInterval);
-                  setTimeout(endGame, 900);
+                  timerLabel.style.color = "#fff";
+                  setTimeout(endGame, 1000);
                 }
               }, 1000);
 
               spawnInterval = setInterval(() => {
                 spawnSticker();
-              }, 550);
+              }, 500);
             }
 
             function spawnSticker() {
               const el = document.createElement("div");
               el.className = "game-sticker";
-              el.textContent = gameStickers[Math.floor(Math.random() * gameStickers.length)];
-              const left = Math.random() * 82;
+              el.textContent =
+                gameStickers[Math.floor(Math.random() * gameStickers.length)];
+              const left = Math.random() * 84;
               el.style.left = left + "%";
-              const duration = 2.6 + Math.random() * 1.8;
+              const duration = 2.4 + Math.random() * 2;
               el.style.animationDuration = duration + "s";
-              el.addEventListener("click", () => {
+              el.addEventListener("click", (e) => {
+                e.stopPropagation();
                 gameScore++;
                 const pop = document.createElement("div");
                 pop.className = "score-pop";
                 pop.textContent = "+1";
                 pop.style.left = el.style.left;
-                pop.style.top = el.style.top || "10%";
+                pop.style.top = "15%";
                 area.appendChild(pop);
-                setTimeout(() => pop.remove(), 650);
+                setTimeout(() => pop.remove(), 700);
                 el.remove();
+                // Sparkle trail
+                const spark = document.createElement("div");
+                spark.className = "sparkle";
+                spark.textContent = "✨";
+                spark.style.left = el.style.left;
+                spark.style.top = "10%";
+                area.appendChild(spark);
+                setTimeout(() => spark.remove(), 600);
               });
               area.appendChild(el);
-              setTimeout(() => el.remove(), duration * 1000 + 100);
+              setTimeout(() => {
+                if (el.parentNode) el.remove();
+              }, duration * 1000 + 150);
             }
 
             function endGame() {
-              overlay.querySelectorAll(".game-sticker").forEach((s) => s.remove());
+              overlay
+                .querySelectorAll(".game-sticker")
+                .forEach((s) => s.remove());
               scoreFinalEl.textContent = gameScore;
               commentEl.textContent = getGameComment(gameScore);
               resultPanel.classList.add("show");
+              if (gameScore >= 10) {
+                showEasterEgg("🔥 GOKILL! Skor " + gameScore + " itu keren banget!");
+              }
             }
 
             continueBtn.addEventListener(
@@ -1246,20 +1629,21 @@
           const sub = document.createElement("div");
           sub.className = "app-card-sub";
           sub.textContent =
-            "stiker bakal jatuh dari atas, tap secepetnya sebelum nyentuh dasar. 12 detik aja, gas!";
+            "stiker lucu bakal berjatuhan, tap secepetnya sebelum jatuh ke bawah! ⏱️ 12 detik aja, buktikan refleksmu~";
           card.appendChild(sub);
 
           const btn = document.createElement("button");
           btn.className = "btn-fun teal full";
-          btn.textContent = "Main (12 detik) 🎮";
+          btn.textContent = "🎮 Main (12 detik)";
           card.appendChild(btn);
 
           return new Promise((resolve) => {
             btn.addEventListener("click", async () => {
               btn.disabled = true;
-              btn.textContent = "lagi main...";
+              btn.textContent = "⚡ lagii main...";
               const score = await playGame();
-              btn.textContent = "Skor kamu: " + score + " ⭐";
+              btn.textContent = "⭐ Skor kamu: " + score;
+              btn.disabled = false;
               resolve(score);
             });
           });
@@ -1270,24 +1654,24 @@
           card.innerHTML = "";
           const title = document.createElement("div");
           title.className = "app-card-title";
-          title.innerHTML = "💌 Pesan Terakhir";
+          title.innerHTML = "💌 Pesan Terakhir (agak serius bentar)";
           card.appendChild(title);
 
           const body = document.createElement("div");
           body.className = "letter-text";
           body.innerHTML =
-            "<p>oke, mode receh off bentar ya (jarang-jarang nih, nikmatin aja 😂)</p>" +
-            '<p>jujur, ini dibuat bukan karena ada momen spesial atau alasan besar. cuma karena kadang suka kepikiran buat say hi ke Najwaa, tapi pas udah di kolom chat, tiba-tiba bingung sendiri mau ngomong apa, takut keliatan aneh atau ganggu, akhirnya gajadi & cuma jadi draft kosong.</p>' +
-            '<p>jadi anggep aja ini versi "say hi" yang muter-muter banget, tapi at least beneran kekirim 😆</p>' +
-            "<p>makasih ya udah jadi salah satu orang yang asik diajak ngobrol (kalo lagi berani chat duluan 😂), yang tanpa sadar bikin obrolan random jadi lebih seru.</p>" +
-            "<p>semoga harimu lancar, drama-nya dikit, dan tetep jadi Najwaa yang random &amp; seru kayak biasanya 🌸</p>" +
-            '<span class="sign">— dari seseorang yang draft chat-nya lebih banyak daripada yang terkirim 😅</span>';
+            "<p>Oke, mode receh off dulu ya (jarang-jarang nih, nikmatin aja 😂)</p>" +
+            "<p>Jujur, ini dibuat bukan karena ada momen spesial atau alasan besar. Cuma karena kadang suka kepikiran buat say hi ke Najwaa, tapi pas udah di kolom chat, tiba-tiba bingung sendiri mau ngomong apa. Takut keliatan aneh atau ganggu, akhirnya gajadi & cuma jadi draft kosong yang numpuk.</p>" +
+            "<p>Jadi anggep aja ini versi 'say hi' yang muter-muter banget, tapi setidaknya beneran kekirim dan (semoga) bisa bikin senyum dikit 😆</p>" +
+            "<p>Makasih ya udah jadi salah satu orang yang asik diajak ngobrol (kalo lagi berani chat duluan 😂), yang tanpa sadar bikin obrolan random jadi lebih berwarna dan gak ngebosenin.</p>" +
+            "<p>Semoga harimu selalu lancar, drama-nya dikit, tugasnya cepet kelar, dan tetep jadi Najwaa yang random & seru kayak biasanya. Jangan berubah ya, kecuali berubah jadi makin keren (itu boleh) 🌸</p>" +
+            '<span class="sign">— dari seseorang yang draft chat-nya lebih banyak daripada yang terkirim 😅✌️</span>';
           card.appendChild(body);
 
           const btn = document.createElement("button");
           btn.className = "btn-fun coral full";
-          btn.style.marginTop = "14px";
-          btn.textContent = "Lanjut →";
+          btn.style.marginTop = "16px";
+          btn.textContent = "Lanjut ke bonus →";
           card.appendChild(btn);
 
           return new Promise((resolve) => {
@@ -1297,16 +1681,18 @@
 
         // ==================== FINALE ====================
         function spawnCelebration() {
-          const pieces = ["🌸", "✨", "💖", "🎉", "⭐", "🎈", "💌", "🌟"];
-          for (let i = 0; i < 22; i++) {
+          const pieces = ["🌸", "✨", "💖", "🎉", "⭐", "🎈", "💌", "🌟", "🎀", "💫", "🍀", "🏆"];
+          const frame = document.getElementById("phoneFrame");
+          for (let i = 0; i < 30; i++) {
             const el = document.createElement("div");
             el.className = "confetti-piece";
             el.textContent = pieces[Math.floor(Math.random() * pieces.length)];
-            el.style.left = Math.random() * 92 + "%";
-            el.style.animationDelay = Math.random() * 0.6 + "s";
-            el.style.fontSize = 1.1 + Math.random() * 1.2 + "rem";
-            document.getElementById("phoneFrame").appendChild(el);
-            setTimeout(() => el.remove(), 3200);
+            el.style.left = Math.random() * 94 + "%";
+            el.style.animationDelay = Math.random() * 1.2 + "s";
+            el.style.animationDuration = 2.5 + Math.random() * 2 + "s";
+            el.style.fontSize = 1.2 + Math.random() * 1.8 + "rem";
+            frame.appendChild(el);
+            setTimeout(() => el.remove(), 4000);
           }
         }
 
@@ -1314,12 +1700,13 @@
           card.innerHTML = "";
           const title = document.createElement("div");
           title.className = "app-card-title";
-          title.innerHTML = "🎁 Paket Stiker buat Najwaa";
+          title.innerHTML = "🎁 Paket Stiker Spesial buat Najwaa";
           card.appendChild(title);
 
           const sub = document.createElement("div");
           sub.className = "app-card-sub";
-          sub.textContent = "ambil semua, gratis, gak ada syarat & ketentuan 😄";
+          sub.textContent =
+            "ambil semua, gratis, gak ada syarat & ketentuan. ini stiker limited edition lho! 😄";
           card.appendChild(sub);
 
           const grid = document.createElement("div");
@@ -1329,16 +1716,29 @@
             const cell = document.createElement("div");
             cell.className = "sticker-cell";
             cell.textContent = e;
+            cell.addEventListener("click", () => {
+              cell.style.transform = "scale(1.3) rotate(10deg)";
+              setTimeout(() => {
+                cell.style.transform = "";
+              }, 300);
+              showToast("stiker " + e + " berhasil diambil! 📦");
+            });
             grid.appendChild(cell);
           });
           // bonus personalized cells
           const bonus1 = document.createElement("div");
           bonus1.className = "sticker-cell small-text";
           bonus1.textContent = "🎰 " + (lastSlotResult || "Si Paling Spesial 🌸");
+          bonus1.addEventListener("click", () =>
+            showToast("julukan resmi: " + (lastSlotResult || "Si Paling Spesial"))
+          );
           grid.appendChild(bonus1);
           const bonus2 = document.createElement("div");
           bonus2.className = "sticker-cell small-text";
           bonus2.textContent = "🎮 Skor: " + gameScore;
+          bonus2.addEventListener("click", () =>
+            showToast("skor mini game: " + gameScore + " poin!")
+          );
           grid.appendChild(bonus2);
           card.appendChild(grid);
 
@@ -1352,49 +1752,54 @@
               navigator
                 .share({
                   title: "untuk Najwaa 🌸",
-                  text: "ada pesan random buat kamu, coba buka deh~",
+                  text: "ada pesan random buat kamu nih, coba buka deh~ ✨",
                   url: window.location.href,
                 })
                 .catch(() => {});
             } else {
               navigator.clipboard
                 .writeText(window.location.href)
-                .then(() => showToast("📋 link disalin! kirim ke Najwaa~"))
+                .then(() => showToast("📋 link disalin! kirim ke Najwaa ya~"))
                 .catch(() => showToast("salin link dari address bar ya 💕"));
             }
           });
           const replayBtn = document.createElement("button");
-          replayBtn.className = "btn-fun";
+          replayBtn.className = "btn-fun purple";
           replayBtn.innerHTML = '<i class="fa-solid fa-rotate"></i> Ulangi';
-          replayBtn.addEventListener("click", () => window.location.reload());
+          replayBtn.addEventListener("click", () => {
+            showToast("🔄 oke, ulang dari awal ya!");
+            setTimeout(() => window.location.reload(), 800);
+          });
           actions.appendChild(shareBtn);
           actions.appendChild(replayBtn);
           card.appendChild(actions);
 
           const note = document.createElement("p");
           note.className = "finale-note";
-          note.textContent = "udah, segini doang receh dari draft ini. makasih udah baca sampe sini 🙏🌸";
+          note.textContent =
+            "udah, segini doang receh dari draft ini. makasih udah baca sampe akhir, Najwaa! 🙏🌸💖";
           card.appendChild(note);
 
-          chatStatus.textContent = "✓✓ terkirim (akhirnya) 😂";
+          chatStatus.innerHTML = '<span class="dot"></span> ✓✓ terkirim (akhirnya) 😂🎉';
           chatStatus.classList.add("sent");
           spawnCelebration();
+          showEasterEgg("🎉 YEAY! Akhirnya kekirim juga!", 3000);
         }
 
         // ==================== SCRIPT ====================
         const chatScript = [
           { type: "text", text: "psst, Najwaa 🌸" },
-          { type: "text", text: "ada pesan random yang nyasar ke draft kamu nih" },
-          { type: "sticker", text: "👀" },
-          { type: "text", text: "bukan tugas, bukan prank, bukan link aneh-aneh kok, aman 😂" },
-          { type: "text", text: "ceritanya gini... kadang suka kepikiran buat chat random gitu aja" },
+          { type: "text", text: "ada pesan random yang nyasar ke draft kamu nih..." },
+          { type: "sticker", text: "👀✨" },
+          { type: "text", text: "bukan tugas, bukan prank, bukan link aneh-aneh kok, aman dijamin 😂👍" },
+          { type: "text", text: "ceritanya gini... kadang suka kepikiran buat chat random aja gitu" },
           {
             type: "text",
-            text: "tapi pas udah mau ngetik, eh bingung sendiri mulai dari mana, terus akhirnya gajadi deh 😅",
+            text: "tapi pas udah mau ngetik, eh bingung sendiri mulai dari mana, overthinking, terus akhirnya gajadi deh 😅",
           },
           {
             type: "text",
-            text: 'jadi daripada chat beneran, aku bikin... ginian aja. anggep aja versi "berani"-nya 🙃',
+            text: 'jadi daripada chat beneran, aku bikin... ginian aja. anggep aja versi "berani"-nya setelah berkali-kali nyimpen draft 🙃',
           },
           { type: "text", text: "udah, gausah dibales kok, baca doang juga udah seneng banget hehe" },
           { type: "text", text: "btw sebelum lanjut, ada kuis receh dulu nih, boleh kan? 👇" },
@@ -1402,34 +1807,55 @@
             type: "quiz",
             question: "Kalo lagi mager parah, biasanya Najwaa ngapain?",
             options: [
-              { label: "📱 Scroll medsos sampe lupa waktu", reaction: "real banget, scroll 10 menit jadi 1 jam 🤡" },
-              { label: "🎧 Rebahan + dengerin musik", reaction: "mood paling sah sedunia, approved 👌" },
-              { label: "🍿 Mikirin mau ngemil apa", reaction: "ngemil emang obat segala masalah sih, betul 🍟" },
-              { label: "💤 Tidur aja, beres", reaction: "paling efisien, no debat, lanjut 😴" },
+              {
+                label: "📱 Scroll medsos sampe lupa waktu",
+                reaction: "real banget, scroll 10 menit jadi 1 jam 🤡📱",
+              },
+              {
+                label: "🎧 Rebahan + dengerin musik",
+                reaction: "mood paling sah sedunia, approved 100% 👌🎵",
+              },
+              {
+                label: "🍿 Mikirin mau ngemil apa",
+                reaction: "ngemil emang solusi segala masalah sih, betul 🍟😋",
+              },
+              {
+                label: "💤 Tidur aja, beres",
+                reaction: "paling efisien, no debat, respect 😴💯",
+              },
             ],
           },
-          { type: "text", text: "oke, dicatat di notes penting 📝" },
+          { type: "text", text: "oke, dicatat di notes penting 📝✨" },
           { type: "text", text: "lanjut ronde kedua~" },
           {
             type: "quiz",
             question: 'Kalo disuruh pilih, mana yang paling "kena"?',
             options: [
-              { label: "Chat dibales lama tapi panjang & niat", reaction: "selera tinggi nih, setuju banget 🙌" },
+              {
+                label: "Chat dibales lama tapi panjang & niat",
+                reaction: "selera tinggi nih, setuju banget 🙌💬",
+              },
               {
                 label: "Chat dibales cepet tapi isinya 'oh','ya','wkwk'",
-                reaction: "iconic sih ini, kita semua pasti pernah 😭",
+                reaction: "iconic sih ini, kita semua pasti pernah 😭✌️",
               },
-              { label: "Chat di-react emoji doang, ga dibales", reaction: "paling toxic tapi paling sering kejadian, wkwk" },
-              { label: "Voice note 3 menit isinya curhat semua 🎙️", reaction: "siap dengerin kapanpun, gas aja 🎧" },
+              {
+                label: "Chat di-react emoji doang, ga dibales",
+                reaction: "paling toxic tapi paling sering kejadian, wkwk 😂💀",
+              },
+              {
+                label: "Voice note 3 menit isinya curhat semua 🎙️",
+                reaction: "siap dengerin kapanpun, gas aja 🎧💚",
+              },
             ],
           },
-          { type: "text", text: "makin yakin deh, Najwaa emang orangnya seru 😄" },
-          { type: "text", text: "oke ini part favorit aku, siap-siap..." },
+          { type: "text", text: "makin yakin deh, Najwaa emang orangnya seru 😄🌟" },
+          { type: "text", text: "oke ini part favorit aku, siap-siap ya..." },
           { type: "slot" },
-          { type: "text", text: "tuh kan, mesinnya jujur banget, gabisa boong 😌" },
-          { type: "text", text: "abis ini ada game bentar, lumayan buat ngademin mata dari tugas 😆" },
+          { type: "text", text: "tuh kan, mesinnya jujur banget, gabisa boong 😌🎰" },
+          { type: "text", text: "abis ini ada game bentar, lumayan buat ngademin mata dari tugas 😆🎮" },
           { type: "game" },
-          { type: "text", text: "oke, part terakhir nih. agak panjang tapi worth it (semoga) 😄" },
+          { type: "text", text: "oke, part terakhir nih. agak panjang tapi worth it (semoga) 😄💌" },
           { type: "letter" },
           { type: "finale" },
         ];
@@ -1445,26 +1871,31 @@
             } else if (item.type === "quiz") {
               const card = await sendCard((c) => {}, item.question);
               await renderQuiz(card, item);
-              await wait(300);
+              await wait(350);
             } else if (item.type === "slot") {
-              const card = await sendCard((c) => {}, "mesin julukan");
+              const card = await sendCard((c) => {}, "mesin julukan...");
               await renderSlot(card);
-              await wait(300);
+              await wait(350);
             } else if (item.type === "game") {
-              const card = await sendCard((c) => {}, "mini game");
+              const card = await sendCard((c) => {}, "mini game...");
               finalGameScore = await renderGame(card);
-              await wait(300);
+              await wait(350);
             } else if (item.type === "letter") {
-              const card = await sendCard((c) => {}, "pesan panjang");
+              const card = await sendCard((c) => {}, "pesan panjang...");
               await renderLetter(card);
-              await wait(300);
+              await wait(350);
             } else if (item.type === "finale") {
-              const card = await sendCard((c) => {}, "paket stiker");
+              const card = await sendCard((c) => {}, "bonus spesial...");
               renderFinale(card, finalGameScore);
               scrollDown();
             }
             scrollDown();
           }
+
+          // Post-script easter egg
+          setTimeout(() => {
+            showEasterEgg("💖 makasih udah baca sampe habis, Najwaa!", 3500);
+          }, 2000);
         }
       })();
     </script>
